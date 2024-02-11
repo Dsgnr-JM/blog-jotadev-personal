@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+	font-family: 'Onest Variable', sans-serif;
+  background: rgb(248 250 252 / 1);
+}
+.main {
+	@apply w-[45rem] flex items-center h-full mx-auto;
+}
+.active {
+	@apply dark:bg-white/10 bg-gray-800/5;
+}
+body::-webkit-scrollbar {
+    width: 14px;
+    display: block;
+    background: linear-gradient(rgb(241 245 249 / 0.8) calc(3.5rem - 2px), rgb(255 255 255 / .2) calc(3.5rem - 2px),rgb(255 255 255 / .2) calc(3.6rem - 2px) ,rgb(248 250 252 / 1) calc(3.6rem - 2px));
+}
+body::-webkit-scrollbar-thumb {
+    border: 5px solid transparent;
+    display: block;
+    background: #787878;
+    border-radius: 10px;
+    background-clip: padding-box;
+}
+html.dark body{
+  background-color: rgb(30 41 59 / 1)
+}
+html.dark body::-webkit-scrollbar{
+  background: linear-gradient(rgb(17 24 39 / 0.5) calc(3.5rem - 2px), rgb(255 255 255 / .2) calc(3.5rem - 2px),rgb(255 255 255 / .2) calc(3.6rem - 2px) ,rgb(30 41 59 /1) calc(3.6rem - 2px));
+}
