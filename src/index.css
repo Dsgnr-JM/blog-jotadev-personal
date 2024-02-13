@@ -7,7 +7,7 @@ body{
   background: rgb(248 250 252 / 1);
 }
 .main {
-	@apply w-[45rem] flex items-center h-full mx-auto;
+	@apply w-[50rem] flex items-center h-full mx-auto;
 }
 .active {
 	@apply dark:bg-white/10 bg-gray-800/5;

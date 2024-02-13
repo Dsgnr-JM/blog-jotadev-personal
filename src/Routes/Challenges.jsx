@@ -1,19 +1,21 @@
-import { useContext, useEffect } from 'react'
-import { ThemeContext } from '../App'
-import { changeTitle } from '../DinamicActionsSEO'
-import { SkeletonList } from '../components/Skeleton'
+import { SkeletonChallenge } from '../components/Skeleton'
+import { Helmet } from 'react-helmet'
 
-export default function  Challenges() {
-	const { setIsTitle } = useContext(ThemeContext)
-	useEffect(() => {
-		setIsTitle(changeTitle('Estas listo para un reto??'))
-	}, [])
-
+export default function Challenges() {
 	return (
-		<section className="pt-24">
-			<main className="main">
-				<SkeletonList />
-			</main>
-		</section>
+		<>
+			<Helmet>
+				<title>Esta listo para un reto?? || JotaDev</title>
+				<meta
+					name='description'
+					content='Estas listo para un reto!!. Pues esta es la seccion encarga de ofreerte todo lo relacionado a la logica de programacion'
+				/>
+			</Helmet>
+			<section className='pt-24'>
+				<main className='main'>
+					<SkeletonChallenge />
+				</main>
+			</section>
+		</>
 	)
 }

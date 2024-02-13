@@ -28,6 +28,7 @@ export default function InputSearch ({ className, inputClass, ButtonClass }) {
         ref={$search}
       />
       <button
+        name="btn_search"
         className={`bg-blue-600 h-full text-white/90 h-full ${ButtonClass} px-4`}
       >
         <FaSearch />

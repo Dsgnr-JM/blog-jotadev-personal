@@ -59,10 +59,12 @@ export default function ListSearch() {
 
 function ListItem({ icon, title, stars }) {
   const urlTitle = urlReplaceToLines(title, true)
+  const { setSearchProp } = useContext(ThemeContext)
 
   return (
     <Link
       to={`/post/${urlTitle}`}
+      onClick={ () => setSearchProp('') }
       className='w-full flex px-4 py-3 gap-2 dark:bg-white/10 bg-gray-300/20 dark:hover:bg-white/20 hover:bg-gray-200/70 justify-between items-center text-black rounded transition-colors'
     >
       {icon}

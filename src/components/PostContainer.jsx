@@ -26,19 +26,19 @@ function PostContainer ({ title }) {
                   li: {
                     props: {
                       className:
-                        'text-xl mt-12 mb-1 font-bold tracking-wider dark:text-sky-400 text-blue-500'
+                        'text-2xl mt-12 mb-1 font-bold tracking-wider dark:text-sky-400 text-blue-500'
                     }
                   },
                   p: {
                     props: {
                       className:
-                        'text-sm dark:text-gray-50/85 text-gray-700/95 leading-6'
+                        'text-base dark:text-gray-50/85 text-gray-700/95 leading-6'
                     }
                   },
                   h1: {
                     props: {
                       className:
-                        'font-extrabold text-2xl mb-1 dark:text-gray-100 text-gray-900 w-[70%]'
+                        'font-extrabold text-3xl mb-1 dark:text-gray-100 text-gray-900 w-[70%]'
                     }
                   },
                   blockquote: {

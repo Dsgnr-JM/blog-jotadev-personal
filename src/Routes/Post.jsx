@@ -1,19 +1,21 @@
 import PostContainer from '../components/PostContainer'
 import Footer from '../components/Footer'
-import { ThemeContext } from '../App'
-import { useContext, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
-import { changeTitle, urlReplaceToLines } from '../DinamicActionsSEO'
+import { urlReplaceToLines } from '../DinamicActionsSEO'
+import { useEffect } from 'react';
+import { Helmet } from 'react-helmet'
 
 export default function Post () {
-  const { setIsTitle } = useContext(ThemeContext)
   const { name } = useParams()
-
-  useEffect(() => {
-    setIsTitle(changeTitle(urlReplaceToLines(name, false)))
-  }, [])
+  useEffect(()=>{
+    window.scrollTo(0,0)
+  },[])
   return (
     <>
+      <Helmet>
+        <title>{ name && urlReplaceToLines(name, false) } || JotaDev</title>
+        <meta name="description" content={`Esta es la informacion optenida sobre el articulo, en este caso es sobre ${ name && urlReplaceToLines(name, false) }`}></meta>
+      </Helmet>
       <PostContainer title={urlReplaceToLines(name, false)} />
       <Footer />
     </>

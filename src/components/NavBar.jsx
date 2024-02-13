@@ -19,7 +19,7 @@ export default function Header () {
 
   return (
     <header className='fixed top-0 left-0 w-full h-14 dark:bg-gray-900/50 backdrop-blur bg-slate-100/80 shadow-xl shadow-gray-900/5 border-b-2 border-white/20 z-20'>
-      <div className='w-[45rem] flex items-center h-full mx-auto'>
+      <div className='main'>
         <div className='flex items-center justify-between w-full'>
           <div className='flex items-center'>
             {isDark ? (
@@ -46,14 +46,14 @@ export default function Header () {
             <NavLink to='/challenges' className='py-1 px-2 rounded'>
               Challenges
             </NavLink>
-            <NavLink to='/search?param=Jota' className='py-1 px-2 rounded'>
+            <NavLink to='/leaderboard' className='py-1 px-2 rounded'>
               LeaderBoard
             </NavLink>
-            <button onClick={() => setIsDark(!isDark)} className='ml-4'>
+            <button onClick={() => setIsDark(!isDark)} name='btn_theme' className='ml-4:'>
               {isDark ? (
-                <FaMoon className='fill-gray-600' />
+                <FaMoon className='fill-gray-600 size-3' />
               ) : (
-                <FaSun className='fill-yellow-400' />
+                <FaSun className='fill-yellow-400 size-3' />
               )}
             </button>
           </div>

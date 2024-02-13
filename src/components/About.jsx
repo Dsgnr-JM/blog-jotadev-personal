@@ -12,12 +12,10 @@ export default function About ({ icon }) {
           estudiante de Ingenieria en Informatica.
         </p>
         <p>
-          {' '}
           Mi mayor logro fue el Desarrollo de TailkieKids 🎯, una aplicacion
           diseñada para que niños puedan aprender ingles.
         </p>
         <p>
-          {' '}
           He sido lider en diferentes grupos de Desarrolladores Web, manteniendo
           el orden, planteamiento y direccion de proyectos sobre la ruta
           estimada, para asi desarrollar aplicaciones web que generen un impacto

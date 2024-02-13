@@ -13,7 +13,7 @@ import {
 
 function Button ({ like }) {
 	return (
-		<button className='flex gap-1 active:scale-95 dark:hover:border-gray-200 dark:hover:text-gray-200 hover:border-black/90 hover:text-black/90 items-center py-[0.10rem] px-2 text-xs rounded-[0.2rem] border-[1px] dark:border-gray-300/80 dark:text-gray-300/80 text-black/80 border-gray-900/50 transition'>
+		<button className='flex gap-1 active:scale-95 dark:hover:border-gray-200 dark:hover:text-gray-200 hover:border-black/90 hover:text-black/90 items-center py-[0.10rem] px-2 text-sm rounded-[0.2rem] border-[1px] dark:border-gray-300/80 dark:text-gray-300/80 text-black/80 border-gray-900/50 transition'>
 			{like == 'Si' ? <FaRegThumbsUp /> : <FaRegThumbsDown />} {like}
 		</button>
 	)
@@ -21,9 +21,9 @@ function Button ({ like }) {
 
 function Footer () {
 	return (
-		<div className='w-[45rem] h-auto flex flex-col gap-4 mx-auto py-4'>
-			<div className='flex h-full justify-start gap-4 items-center mb-8 mt-2'>
-				<p className='dark:text-sky-200/80 text-slate-600/80 text-sm'>
+		<div className='main flex-col gap-4 py-4'>
+			<div className='flex h-full justify-start gap-4 items-center mb-8 mt-2 w-full'>
+				<p className='dark:text-sky-200/80 text-slate-600/80 text-base'>
 					¿Te sirvio este contenido?
 				</p>
 				<div className='flex gap-2'>
@@ -34,14 +34,14 @@ function Footer () {
 			<div className='w-full flex items-center justify-between mt-9'>
 				<a
 					href='#'
-					className='py-1.5 px-2 border-[1px] border-emerald-500 dark:border-emerald-600 dark:text-emerald-500 text-emerald-600 rounded font-semibold tracking-wider flex items-center gap-1 hover:bg-emerald-600 dark:hover:bg-emerald-500 500  dark:hover:text-slate-800 hover:text-slate-100 hover:shadow-xl text-xs transition'
+					className='py-1.5 px-2 border-[1px] border-emerald-500 dark:border-emerald-600 dark:text-emerald-500 text-emerald-600 rounded font-semibold tracking-wider flex items-center gap-1 hover:bg-emerald-600 dark:hover:bg-emerald-500 500  dark:hover:text-slate-800 hover:text-slate-100 hover:shadow-xl text-sm transition'
 				>
 					<FaArrowLeft />
 					Metodos de Objetos
 				</a>
 				<a
 					href='#'
-					className='py-1.5 px-2 border-[1px] dark:border-blue-400 border-blue-500 dark:text-blue-400 text-blue-500 rounded font-semibold tracking-wider flex items-center gap-1 dark:hover:bg-blue-400 hover:bg-blue-500 dark:hover:text-slate-800 hover:text-slate-100 hover:shadow-xl text-xs transition'
+					className='py-1.5 px-2 border-[1px] dark:border-blue-400 border-blue-500 dark:text-blue-400 text-blue-500 rounded font-semibold tracking-wider flex items-center gap-1 dark:hover:bg-blue-400 hover:bg-blue-500 dark:hover:text-slate-800 hover:text-slate-100 hover:shadow-xl text-sm transition'
 				>
 					Metodos de Strings
 					<FaArrowRight />
@@ -67,7 +67,7 @@ function Footer () {
 					<FaYoutube className='size-6 fill-red-600' />
 				</a>
 			</div>
-			<p className='text-center text-gray-900/70 text-xs dark:text-slate-100/70'>
+			<p className='text-center text-gray-900/70 text-sm dark:text-slate-100/70'>
 				No te olvides de compartir para que mas personas aprendan
 			</p>
 		</div>
