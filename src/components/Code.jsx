@@ -24,7 +24,7 @@ function Code({ children, className }) {
 	const [, lang] = className?.split('-')
 
 	return (
-		<div className='relative mt-8 mb-10 shadow-2xl shadow-black/30'>
+		<div className='relative mt-8 mb-10 shadow-2xl shadow-black/20'>
 			<CopyToClipboard text={children} onCopy={() => setCopied(true)}>
 				<button className='absolute top-4 right-4 z-10'>
 					{copied ? <FaRegClipboard /> : <FaRegCopy />}

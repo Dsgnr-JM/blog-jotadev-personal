@@ -28,7 +28,7 @@ function BentoItem ({ grid, title, color, position, subtitle, icon }) {
           {title}
         </h1>
         {subtitle && (
-          <p className='dark:text-gray-50/50 text-gray-900/70 text-xs text-center text-pretty'>
+          <p className='dark:text-gray-50/50 text-gray-900/70 md:text-sm text-xs text-center text-pretty'>
             {subtitle}
           </p>
         )}

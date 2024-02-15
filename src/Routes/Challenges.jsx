@@ -12,7 +12,7 @@ export default function Challenges() {
 				/>
 			</Helmet>
 			<section className='pt-24'>
-				<main className='main'>
+				<main className='main md:w-[50rem] w-full md:px-0 px-2'>
 					<SkeletonChallenge />
 				</main>
 			</section>

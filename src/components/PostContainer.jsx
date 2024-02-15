@@ -17,7 +17,7 @@ function PostContainer ({ title }) {
 
   return (
     <article className='pt-24'>
-      <div className='main'>
+      <div className='main md:w-[50rem] w-full md:px-0 px-2'>
         <div className='w-full'>
           {postContent ? (
             <Markdown
@@ -26,19 +26,19 @@ function PostContainer ({ title }) {
                   li: {
                     props: {
                       className:
-                        'text-2xl mt-12 mb-1 font-bold tracking-wider dark:text-sky-400 text-blue-500'
+                        'md:text-2xl text-xl mt-12 mb-1 font-bold tracking-wider dark:text-sky-400 text-blue-500'
                     }
                   },
                   p: {
                     props: {
                       className:
-                        'text-base dark:text-gray-50/85 text-gray-700/95 leading-6'
+                        'md:text-base text-sm dark:text-gray-50/85 text-gray-700/95 leading-6'
                     }
                   },
                   h1: {
                     props: {
                       className:
-                        'font-extrabold text-3xl mb-1 dark:text-gray-100 text-gray-900 w-[70%]'
+                        'font-extrabold md:text-3xl text-2xl mb-1 dark:text-gray-100 text-gray-900 md:w-[70%] w-[90%]'
                     }
                   },
                   blockquote: {

@@ -22,6 +22,7 @@ export default function InputSearch ({ className, inputClass, ButtonClass }) {
     <form className={`w-full flex ${className}`} onSubmit={handleSearch}>
       <input
         type='search'
+        aria-label='Buscador de articulos'
         defaultValue={urlReplaceToLines(searchProp, false) || null}
         className={`h-full outline-none px-4 w-auto  font-light dark:text-gray-100/80 text-gray-900 h-full ${inputClass}`}
         placeholder='Que quieres aprender ?'
@@ -29,6 +30,8 @@ export default function InputSearch ({ className, inputClass, ButtonClass }) {
       />
       <button
         name="btn_search"
+        type="submit"
+        aria-label='Activador de busquedas'
         className={`bg-blue-600 h-full text-white/90 h-full ${ButtonClass} px-4`}
       >
         <FaSearch />

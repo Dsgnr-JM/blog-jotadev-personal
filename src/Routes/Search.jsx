@@ -26,7 +26,7 @@ export default function Search () {
           content='Esta es la seccion de busqueda del Blog es utiliza para buscar en el registro de la base de datos los lenguages, articulos tendencias y articulos de interes, sin importar el lenguage'
         />
       </Helmet>
-      <div className='main flex-col gap-3'>
+      <div className='main md:w-[50rem] w-full md:px-0 px-2 flex-col gap-3'>
         <InputSearch
           className='h-10'
           ButtonClass='rounded-r'

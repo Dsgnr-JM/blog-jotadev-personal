@@ -15,7 +15,7 @@ import { Helmet } from 'react-helmet'
 
 export default function Home() {
   return (
-    <div className='main flex-col'>
+    <div className='main md:w-[50rem] md:px-0 px-4 w-full flex-col'>
       <Helmet>
         <title>Bienvenido a mi Blog JotaDev</title>
         <meta
@@ -26,13 +26,13 @@ export default function Home() {
       <header className='w-full flex flex-col h-screen'>
         <div className='w-full flex justify-between h-full items-center -mb-16'>
           <div className='w-[50%]'>
-            <h1 className='text-7xl font-semibold dark:text-white text-black mb-3'>
+            <h1 className='md:text-7xl text-6xl font-semibold dark:text-white text-black mb-3'>
               Jota
               <strong className='font-extrabold bg-gradient-to-r from-blue-600 to-cyan-500 text-transparent bg-clip-text'>
                 Dev
               </strong>
             </h1>
-            <p className='text-base dark:text-gray-100 text-gray-900/90'>
+            <p className='md:text-base text-sm dark:text-gray-100 text-gray-900/90'>
               Bienvenido, soy JotaDev {' '}
               <span className='dark:text-blue-400 text-blue-600'>
                 desarrollador Web{' '}
@@ -54,25 +54,28 @@ export default function Home() {
             </p>
           </div>
           <div className='relative'>
-            <LogoDark className='size-48 rotate-6 mr-8' />
-            <LogoDark className='size-48 rotate-6 mr-8 blur-2xl absolute top-0 left-0 opacity-40 scale-120' />
+            <LogoDark className='md:size-48 size-36 rotate-6 mr-8' />
+            <LogoDark className='md:size-48 size-36 rotate-6 mr-8 blur-2xl absolute top-0 left-0 opacity-40 scale-120' />
           </div>
         </div>
         <div className='flex justify-center gap-4 w-full pb-12'>
           <a
             href='https://github.com/Dsgnr-JM'
+            aria-label='Redireccionar a el github de JotaDev'
             className='flex gap-2 items-center px-2 py-1.5 dark:bg-gray-100/10 bg-gray-600/10 rounded-sm group hover:bg-blue-500 transition duration-300'
           >
             <FaGithub className='dark:text-white text-blue-600 size-6 group-hover:text-gray-200 group-hover:dark:text-gray-100' />
           </a>
           <a
             href='https://www.discord.com/JotaDev'
+            aria-label='Redireccionar a el grupo de Discord de JotaDev'
             className='flex gap-2 items-center px-2 py-1.5 dark:bg-gray-100/10 bg-gray-600/10 rounded-sm group hover:bg-blue-500 transition duration-300'
           >
             <FaDiscord className='dark:text-white text-blue-600 size-6 group-hover:text-gray-200 group-hover:dark:text-gray-100' />
           </a>
           <a
             href='https://www.whatsapp.org'
+            aria-label='Redireccionar a el grupo de WhatsApp "Programadores"'
             className='flex gap-2 items-center px-2 py-1.5 dark:bg-gray-100/10 bg-gray-600/10 rounded-sm group hover:bg-blue-500 transition duration-300'
           >
             <FaWhatsapp className='dark:text-white text-blue-600 size-6 group-hover:text-gray-200 group-hover:dark:text-gray-100' />
@@ -80,7 +83,7 @@ export default function Home() {
         </div>
       </header>
       <div className='flex flex-col h-auto my-9 w-full'>
-        <h1 className='text-2xl font-extrabold text-left mb-6 flex dark:text-white text-gray-900/90 items-center'>
+        <h1 className='md:text-2xl text-xl font-extrabold text-left mb-6 flex dark:text-white text-gray-900/90 items-center'>
           Ultimos articulos
           <FaFireAlt className='size-6 dark:fill-sky-300 fill-sky-400 ml-2' />
         </h1>
@@ -91,7 +94,7 @@ export default function Home() {
         </ol>
       </div>
       <div className='flex flex-col items-center h-screen mt-9 w-full'>
-        <h1 className='text-3xl font-extrabold dark:text-white text-black capitalize flex gap-1 items-center'>
+        <h1 className='md:text-3xl text-2xl font-extrabold dark:text-white text-black capitalize flex gap-1 items-center'>
           Tecnologias abarcadas
           <FaCode className='ml-2 dark:fill-sky-300 fill-sky-400' />
         </h1>

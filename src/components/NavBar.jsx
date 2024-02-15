@@ -19,7 +19,7 @@ export default function Header () {
 
   return (
     <header className='fixed top-0 left-0 w-full h-14 dark:bg-gray-900/50 backdrop-blur bg-slate-100/80 shadow-xl shadow-gray-900/5 border-b-2 border-white/20 z-20'>
-      <div className='main'>
+      <div className='main md:w-[50rem] md:px-0 px-2 w-full'>
         <div className='flex items-center justify-between w-full'>
           <div className='flex items-center'>
             {isDark ? (
@@ -27,7 +27,7 @@ export default function Header () {
             ) : (
               <LogoLight className='size-7 mr-3' />
             )}
-            <span className='dark:text-white/80 text-gray-900/80 font-bold tracking-wider'>
+            <span className='dark:text-white/80 text-gray-900/80 font-bold tracking-wider md:block hidden'>
               Jota Dev
             </span>
           </div>
@@ -40,16 +40,16 @@ export default function Header () {
 
               />
             )}
-            <NavLink to='/' className='py-1 px-2 rounded'>
+            <NavLink to='/' className='py-1 px-2 rounded' aria-label='Ir a la pestaña inicio'>
               Inicio
             </NavLink>
-            <NavLink to='/challenges' className='py-1 px-2 rounded'>
+            <NavLink to='/challenges' className='py-1 px-2 rounded' aria-label='Ir a la pestaña Challenges'>
               Challenges
             </NavLink>
-            <NavLink to='/leaderboard' className='py-1 px-2 rounded'>
+            <NavLink to='/leaderboard' className='py-1 px-2 rounded' aria-label='Ir a la pestaña LeaderBoard'>
               LeaderBoard
             </NavLink>
-            <button onClick={() => setIsDark(!isDark)} name='btn_theme' className='ml-4:'>
+            <button onClick={() => setIsDark(!isDark)} name='btn_theme' className='ml-4' aria-label='Cambiar a modo Claro u Oscuro'>
               {isDark ? (
                 <FaMoon className='fill-gray-600 size-3' />
               ) : (

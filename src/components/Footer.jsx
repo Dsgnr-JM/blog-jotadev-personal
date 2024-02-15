@@ -14,14 +14,14 @@ import {
 function Button ({ like }) {
 	return (
 		<button className='flex gap-1 active:scale-95 dark:hover:border-gray-200 dark:hover:text-gray-200 hover:border-black/90 hover:text-black/90 items-center py-[0.10rem] px-2 text-sm rounded-[0.2rem] border-[1px] dark:border-gray-300/80 dark:text-gray-300/80 text-black/80 border-gray-900/50 transition'>
-			{like == 'Si' ? <FaRegThumbsUp /> : <FaRegThumbsDown />} {like}
+			<span className={`font-extrabold ${like == 'Si' ? 'dark:text-green-500 text-green-700' : 'dark:text-red-500 text-red-700'}`}>{like == 'Si' ? '✔' : '✖'}</span> {like}
 		</button>
 	)
 }
 
 function Footer () {
 	return (
-		<div className='main flex-col gap-4 py-4'>
+		<div className='main md:w-[50rem] w-full md:px-0 px-2 flex-col gap-4 py-4'>
 			<div className='flex h-full justify-start gap-4 items-center mb-8 mt-2 w-full'>
 				<p className='dark:text-sky-200/80 text-slate-600/80 text-base'>
 					¿Te sirvio este contenido?

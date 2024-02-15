@@ -7,6 +7,7 @@ import { urlReplaceToLines } from '../DinamicActionsSEO'
 import { SkeletonList } from './Skeleton'
 import { useContext, useLayoutEffect } from 'react'
 import { ThemeContext } from '../App'
+import { SearchNotFound } from './Error'
 
 export default function ListSearch() {
   const { listData, setListData, searchProp } = useContext(ThemeContext)
@@ -31,11 +32,11 @@ export default function ListSearch() {
   return (
     <div className='w-full h-auto'>
       <span className='dark:text-white/80 text-black/50 flex items-center gap-1'>
-        Resultados para la busqueda
-        <span className='font-semibold text-cyan-400 dark:text-cyan-300'>
+        <span className='font-semibold text-cyan-500 dark:text-cyan-300 md:text-base'>{listData && listData.length}</span> Resultados para la busqueda
+        <span className='font-semibold text-cyan-500 dark:text-cyan-300'>
           {searchProp}
         </span>
-        <FaChevronRight className='font-extrabold size-4 text-cyan-400 dark:text-cyan-300' />
+        <FaChevronRight className='font-extrabold size-4 text-black dark:text-white' />
       </span>
       {!listData ? (
         <SkeletonList />
@@ -51,7 +52,7 @@ export default function ListSearch() {
           ))}
         </ul>
       ) : (
-        <h1>No se encontraron Resultados</h1>
+        <SearchNotFound/>
       )}
     </div>
   )
@@ -70,7 +71,7 @@ function ListItem({ icon, title, stars }) {
       {icon}
       <div className='flex w-full flex-1'>
         <div className='flex gap-4 justify-start w-full'>
-          <h2 className='text-sm dark:text-white/70 max-w-[80%] text-gray-700 uppercase font-semibold'>
+          <h2 className='text-sm dark:text-white/70 md:max-w-[80%] max-w-[70%] md:max-h-auto max-h-4 text-pretty overflow-hidden text-gray-700 uppercase font-semibold'>
             {title}
           </h2>
           <div>
