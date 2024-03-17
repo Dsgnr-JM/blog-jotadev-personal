@@ -1,102 +1,30 @@
 [
   {
-    "tag": "html",
-    "title": "Como que Html ahora es un lenguaje de programacion!!",
+    "id": 4,
+    "language": "javascript",
+    "title_article": "Formas de recorrer arrays en JavaScript",
+    "file":"./article.md",
     "stars": 3
   },
   {
-    "tag": "js",
-    "title": "Javascript esta acabado",
+    "id": 5,
+    "language": "javascript",
+    "title_article": "Metodos de Arrays en JavaScript",
+    "file":"./article_.md",
     "stars": 4
   },
   {
-    "tag": "js",
-    "title": "Javascript en el backend",
+    "id": 6,
+    "language": "php",
+    "title_article": "PHP se adueña de la Web de nuevo",
+    "file":"./article_php.md",
     "stars": 2
   },
   {
-    "tag": "css",
-    "title": "Css puede usar bases de datos",
+    "id": 7,
+    "language": "css",
+    "title_article": "Css moderno esta completamente loco",
+    "file":"./article-214214.md",
     "stars": 5
-  },
-  {
-    "tag": "php",
-    "title": "Laravel el framework de php",
-    "stars": 5
-  },
-  {
-    "tag": "tailwind",
-    "title": "Como que tailwind ahora es mejor que CSS",
-    "stars": 2
-  },
-  {
-    "tag": "react",
-    "title": "React esta muriendo",
-    "stars": 5
-  },
-  {
-    "tag": "php",
-    "title": "Php se adueña de la Web, de nuevo",
-    "stars": 5
-  },
-  {
-    "tag": "tailwind",
-    "title": "Modo Claro y Oscuro en tailwind ahora es mas facil",
-    "stars": 3
-  },
-  {
-    "tag": "react",
-    "title": "React no puede mas",
-    "stars": 5
-  },
-  {
-    "tag": "html",
-    "title": "HTMX ahora comienza una nueva era!!",
-    "stars": 2
-  },
-  {
-    "tag": "html",
-    "title": "HTML  sin CSS ni JAVASCRIPT, como es posible??",
-    "stars": 4
-  },
-  {
-    "tag": "js",
-    "title": "Javascript ya no se usara en el Front y ahora que!!",
-    "stars": 5
-  },
-  {
-    "tag": "css",
-    "title": "CSS4 cuando llegara",
-    "stars": 1
-  },
-  {
-    "tag": "php",
-    "title": "Php y Javascript cual es Mejor",
-    "stars": 4
-  },
-  {
-    "tag": "tailwind",
-    "title": "Mejores librerias para Tailwind",
-    "stars": 1
-  },
-  {
-    "tag": "react",
-    "title": "Hooks de React",
-    "stars": 5
-  },
-  {
-    "tag": "php",
-    "title": "Php se adueña de la Web, de nuevo",
-    "stars": 2
-  },
-  {
-    "tag": "tailwind",
-    "title": "Tailwind tiene nueva competencias",
-    "stars": 3
-  },
-  {
-    "tag": "react",
-    "title": "React es otro nivel",
-    "stars": 3
   }
 ]

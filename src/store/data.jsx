@@ -62,7 +62,7 @@ const iconsTag = [
     icon: <IoLogoCss3 className='fill-sky-500 size-6' />
   },
   {
-    tag: 'js',
+    tag: 'javascript',
     icon: <IoLogoJavascript className='fill-yellow-400 size-6' />
   },
   {

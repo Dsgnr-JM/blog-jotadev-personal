@@ -11,6 +11,15 @@ function SkeletonList() {
   )
 }
 
+function SkeletonHot () {
+  return <>
+    <div className="animate-pulse flex py-2 px-4 bg-gray-200 dark:text-gray-600 dark:bg-white/5 rounded-md my-3 w-full h-10"></div>
+    <div className="animate-pulse flex py-2 px-4 bg-gray-200 dark:text-gray-600 dark:bg-white/5 rounded-md my-3 w-full h-10"></div>
+    <div className="animate-pulse flex py-2 px-4 bg-gray-200 dark:text-gray-600 dark:bg-white/5 rounded-md my-3 w-full h-10"></div>
+    <div className="animate-pulse flex py-2 px-4 bg-gray-200 dark:text-gray-600 dark:bg-white/5 rounded-md my-3 w-full h-10"></div>
+  </> 
+}
+
 function SkeletonPost() {
   return (
     <div role='status' className='space-y-2.5 animate-pulse w-full'>
@@ -93,4 +102,4 @@ function SkeletonChallenge() {
   )
 }
 
-export { SkeletonPost, SkeletonList, SkeletonChallenge }
+export { SkeletonPost, SkeletonList, SkeletonChallenge, SkeletonHot }

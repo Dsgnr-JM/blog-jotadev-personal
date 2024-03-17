@@ -1,6 +1,6 @@
-import { FaMoon, FaSun } from 'react-icons/fa'
+import { FaMoon, FaSun,FaBars } from 'react-icons/fa'
 import { LogoDark, LogoLight } from './Logo'
-import { useContext, useEffect } from 'react'
+import { useContext, useEffect, useRef } from 'react'
 import { ThemeContext } from '../App'
 import { changeThemeStorage } from '../localStorage'
 import { NavLink, useLocation } from 'react-router-dom'
@@ -9,6 +9,7 @@ import InputSearch from './InputSearch'
 export default function Header () {
   const { pathname } = useLocation()
   const { isDark, setIsDark } = useContext(ThemeContext)
+  const btnMain = useRef(null)
 
   useEffect(() => {
     changeThemeStorage(isDark)
@@ -40,22 +41,29 @@ export default function Header () {
 
               />
             )}
-            <NavLink to='/' className='py-1 px-2 rounded' aria-label='Ir a la pestaña inicio'>
-              Inicio
-            </NavLink>
-            <NavLink to='/challenges' className='py-1 px-2 rounded' aria-label='Ir a la pestaña Challenges'>
-              Challenges
-            </NavLink>
-            <NavLink to='/leaderboard' className='py-1 px-2 rounded' aria-label='Ir a la pestaña LeaderBoard'>
-              LeaderBoard
-            </NavLink>
-            <button onClick={() => setIsDark(!isDark)} name='btn_theme' className='ml-4' aria-label='Cambiar a modo Claro u Oscuro'>
-              {isDark ? (
-                <FaMoon className='fill-gray-600 size-3' />
-              ) : (
-                <FaSun className='fill-yellow-400 size-3' />
-              )}
-            </button>
+            <div className="w-full flex items-center relative">
+              <div className="md:static  md:visible invisible absolute md:blur-0 blur-xl top-[200%] right-0 flex-1 flex md:flex-row flex-col md:items-center items-end transition" ref={btnMain}>
+                <NavLink to='/' className='py-1 px-2 rounded transition-all' aria-label='Ir a la pestaña inicio'>
+                  Inicio
+                </NavLink>
+                <NavLink to='/challenges' className='py-1 px-2 rounded transition-all' aria-label='Ir a la pestaña Challenges'>
+                  Challenges
+                </NavLink>
+                <NavLink to='/leaderboard' className='py-1 px-2 rounded transition-all' aria-label='Ir a la pestaña LeaderBoard'>
+                  LeaderBoard
+                </NavLink>
+                <button onClick={() => setIsDark(!isDark)} name='btn_theme' className='md:ml-4 md:pr-0 pr-2' aria-label='Cambiar a modo Claro u Oscuro'>
+                  {isDark ? (
+                    <FaMoon className='fill-gray-600 size-3' />
+                  ) : (
+                    <FaSun className='fill-yellow-400 size-3' />
+                  )}
+                </button>
+              </div>
+              <FaBars className="size-4 md:invisible cursor-pointer" onClick={()=> {btnMain.current.classList.toggle('invisible')
+                if(btnMain.current.className.includes('invisible') === false) setTimeout(()=> btnMain.current.classList.add('invisible'),2000)
+            }}/>
+            </div>
           </div>
         </div>
       </div>

@@ -4,15 +4,21 @@ import Code from './Code'
 import { Tags, Tag } from './Tags'
 import { SkeletonPost } from './Skeleton'
 
-function PostContainer ({ title }) {
+function PostContainer ({ title, file }) {
   const [postContent, setPostContent] = useState(null)
   useEffect(() => {
-    async function getData (title) {
-      const data = await fetch(`http://localhost:5173/${'article_php'}.md`)
+    async function getData (file) {
+      const data = await fetch(`.${file}`)
       const dataArticle = await data.text()
       return setPostContent(dataArticle)
     }
-    getData()
+    async function  fetchArticle  () {
+      const fetching = await fetch("../data.json")
+      const data = await fetching.json()
+      const file = await data.find(i => i.title_article == title)
+      getData(await file.file)
+    }
+    fetchArticle()
   }, [])
 
   return (
@@ -44,7 +50,7 @@ function PostContainer ({ title }) {
                   blockquote: {
                     props: {
                       className:
-                        "relative flex my-3 before:content-[''] gap-1 before:w-[5px] before:h-auto before:bg-sky-500 after:dark:bg-sky-400 before:rounded-xl before:block  [&>p]:rounded [&>p]:py-2 [&>p]:px-1 [&>p]:leading-0 [&>p]:bg-gray-200/70 [&>p]:dark:bg-gray-700/70 w-full h-full [&>p]:flex-1 [&>p]:m-0"
+                        "relative flex my-3 before:content-[''] gap-1 before:w-[5px] before:h-auto before:bg-sky-500 after:dark:bg-sky-400 before:rounded-xl before:block  [&>p]:rounded [&>p]:py-2 [&>p]:px-1 [&>p]:leading-0 [&>p]:bg-gray-200/90 [&>p]:dark:bg-gray-700/90 w-full h-full [&>p]:flex-1 [&>p]:m-0"
                     }
                   },
                   Tags: {

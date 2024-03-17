@@ -1,10 +1,8 @@
 import {
 	javascript,
 	php,
-	python,
 	jsx,
 	css,
-	json,
 } from "react-syntax-highlighter/dist/esm/languages/prism";
 
 const languages = [
@@ -17,20 +15,12 @@ const languages = [
 		item: php,
 	},
 	{
-		name: "python",
-		item: python,
-	},
-	{
 		name: "jsx",
 		item: jsx,
 	},
 	{
 		name: "css",
 		item: css,
-	},
-	{
-		name: "json",
-		item: json,
 	},
 ];
 

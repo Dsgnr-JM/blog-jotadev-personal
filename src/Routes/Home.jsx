@@ -10,10 +10,21 @@ import {
 import Bento from '../components/Bento'
 import ArticlesHot from '../components/ArticlesHot'
 import About from '../components/About'
-import { dataArticlesHot } from '../store/data'
+import { dataArticlesHot, selectIcon } from '../store/data'
+import { SkeletonHot } from '../components/Skeleton'
 import { Helmet } from 'react-helmet'
+import { useEffect, useState } from 'react';
 
 export default function Home() {
+  const [hotArticles, setHotArticles] = useState(null)
+  useEffect(() => {
+    async function getArticlesHot () {
+      const fetching = await fetch(`./data.json`)
+      const data = await fetching.json()
+      setHotArticles(data.slice(0,4))
+    }
+    getArticlesHot()
+  }, [])
   return (
     <div className='main md:w-[50rem] md:px-0 px-4 w-full flex-col'>
       <Helmet>
@@ -24,8 +35,8 @@ export default function Home() {
         />
       </Helmet>
       <header className='w-full flex flex-col h-screen'>
-        <div className='w-full flex justify-between h-full items-center -mb-16'>
-          <div className='w-[50%]'>
+        <div className='w-full flex justify-between h-full items-center -mb-16 md:gap-0 gap-4'>
+          <div className='md:max-w-[50%] max-w-max flex-auto'>
             <h1 className='md:text-7xl text-6xl font-semibold dark:text-white text-black mb-3'>
               Jota
               <strong className='font-extrabold bg-gradient-to-r from-blue-600 to-cyan-500 text-transparent bg-clip-text'>
@@ -54,8 +65,8 @@ export default function Home() {
             </p>
           </div>
           <div className='relative'>
-            <LogoDark className='md:size-48 size-36 rotate-6 mr-8' />
-            <LogoDark className='md:size-48 size-36 rotate-6 mr-8 blur-2xl absolute top-0 left-0 opacity-40 scale-120' />
+            <LogoDark className='md:size-48 size-32 rotate-6 md:mr-8' />
+            <LogoDark className='md:size-48 size-32 rotate-6 md:mr-8 blur-2xl absolute top-0 left-0 opacity-40 scale-120' />
           </div>
         </div>
         <div className='flex justify-center gap-4 w-full pb-12'>
@@ -88,12 +99,16 @@ export default function Home() {
           <FaFireAlt className='size-6 dark:fill-sky-300 fill-sky-400 ml-2' />
         </h1>
         <ol>
-          {dataArticlesHot.map((article, i) => (
-            <ArticlesHot key={i} icon={article.icon} title={article.title} />
-          ))}
+          {
+            hotArticles
+            ? hotArticles.map((article, i) => (
+            <ArticlesHot key={i} icon={selectIcon(article.language).icon} title={article.title_article}/>
+            ))
+            : <SkeletonHot/>
+          }
         </ol>
       </div>
-      <div className='flex flex-col items-center h-screen mt-9 w-full'>
+      <div className='flex flex-col items-center md:h-screen h-[80vh] mt-9 w-full'>
         <h1 className='md:text-3xl text-2xl font-extrabold dark:text-white text-black capitalize flex gap-1 items-center'>
           Tecnologias abarcadas
           <FaCode className='ml-2 dark:fill-sky-300 fill-sky-400' />

@@ -22,7 +22,7 @@ export default function ListSearch() {
       // Buscador por ahora
       const searchList = list.filter((item) => {
         const reg = new RegExp(searchProp.toLowerCase(), 'g')
-        return item.title.toLowerCase().match(reg) && item
+        return item.title_article.toLowerCase().match(reg) && item
       })
       setListData(searchList)
     }
@@ -43,13 +43,13 @@ export default function ListSearch() {
       ) : listData.length > 0 ? (
         <ul className='w-full h-auto mt-6 gap-4 flex flex-col'>
           {listData.map((dataItem, i) => (
-            <ListItem
-              key={i}
-              title={dataItem.title}
-              icon={selectIcon(dataItem.tag).icon}
-              stars={dataItem.stars}
-            />
-          ))}
+                      <ListItem
+                        key={i}
+                        title={dataItem.title_article}
+                        icon={selectIcon(dataItem.language).icon}
+                        stars={dataItem.stars}
+                      />
+                    ))}
         </ul>
       ) : (
         <SearchNotFound/>
@@ -75,7 +75,7 @@ function ListItem({ icon, title, stars }) {
             {title}
           </h2>
           <div>
-            <Rating stars={stars} />
+            { stars && <Rating stars={stars} />}
           </div>
         </div>
         <FaArrowRight className='fill-black dark:fill-white' />

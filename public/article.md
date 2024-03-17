@@ -1,66 +1,102 @@
-# Metodos de Arrays en JavaScript 🔥
+# Formas de recorrer arrays en JavaScript 🍭
 <Tags>
-	<Tag type="js">JS</Tag>
-	<Tag type="alg">ALG</Tag>
-	<Tag type="html">HTML</Tag>
+  <Tag type="js">JS</Tag>
+  <Tag type="alg">ALG</Tag>
+  
 </Tags>
 
-Los metodos de arrays en **JavaScript** son todas aquellas funciones que nos ayudan en el dia a dia del programador a solucionar problemas en **Arrays** que pueden verse complejos 💢 si no se conocen bien el como funciona el algoritmo de estas **tipos de datos**. En este post veremos desde el pequeño metodo *SORT* hasta el grandioso metodo *REDUCE*, si estas listo para conocer a detalle dichos metodos pues que estas esperando para comenzar a bajar ⏬.
+Recorrer un array es una tarea que aunque parece simple puede volver compleja, ademas que es sin duda una de las tareas mas cotidianas que veremos en el mundo de la programacion. E javaScript existen diferentes metodos y maneras de recorrer un array, por ello en este articulo te mostraremos las diferentes Maneras de Recorrer un Array en JS, desde el viejo bucle ***For*** hasta la herramienta de la ***Recursividad***. Si estas listo para aprender mas sobre programacion pues empezemos si mas.
 
-1. Metodo Sort
+1. Bucle For
 
-El metodo ***sort*** se utiliza para **ordenar** un Array ya sea de forma *Ascendente o Descendiente* dicho metodo toma como parametros una *Callback* donde se le pasan por parametros la forma en la que se ordenara el array, la misma devuelve un Array **Ordenado**.
+El bucle ***for*** es un tipo de bucle que se puede ver en todos lo lenguages de programcion o a menos la mayoria. En JS el Bucle ***for*** cuenta con variantes: Bucle For i, Bucle For in, Bucle For of. Ambos hacen lo mismo recorrer un array o un loop hasta un numero dado, la diferencia es que en el bucle **for normal** tenemos todo el control damos una variable, una condicional, y un incrementador o decrementador, en cambio en el bucle **for of** damos un array y sacamos su valor y en el **bucle in** damos un array y sacamos su indice.
 
 ``` javascript
 
-// Strings
-const names = [ 'Jota' ,'Alex' ,'Beto' ];
-names.sort();
-// [ 'Alex' ,'Beto' ,'Jota' ]
+const food = ['🍖','🐔','🐟','🍹','🍅']
 
-// Numbers
-const numbers = [ 100, 24 ,4 ,2 ,5 ]
-numbers.sort(( a, b ) => {
-	return a - b;
+for (var i = 0; i < food.length; i++) { //'🍖','🐔','🐟','🍹','🍅'
+  console.log(food[i])
+}
+for (i of food) { // '🍖','🐔','🐟','🍹','🍅'
+  console.log(i)
+}
+for (i in food) { // '🍖','🐔','🐟','🍹','🍅'
+  console.log(food[i])
+}
+
+```
+
+2. Bucle While
+
+El bucle ***while*** cuenta tambien con el ***do while*** que se ejecuta una vez siempre, en cambio el **while normal** lo que hace es que se ejecuta miestras se cumple una condicion y por ende ese es el parametro que recibe dicho bucle
+
+
+``` javascript
+
+const nums = [0,1,2,3,4]
+
+let i = 0
+
+while (nums.length > i) { // 0,1,2,3,4
+  console.log(nums[i])
+  i++
+}
+
+```
+
+> Deber tener cuidado que la condicion no se cumpla siempre sino se creara un bucle infinito
+
+
+3. Metodo ForEach
+
+El metodo ***forEach*** que en otros lenguages de programacion no es un metodo si no un bucle el cual puede ser accedido desde cualquier lugar solo con el simple hecho de ser llamado, en JavaScript es usado como un metodo de un ***Array*** esto quiere decir que solo funciona con esta estructura de control. Para ser usado recibe como parametros una ***callback*** la cual recibe el item, indice, array.
+
+``` javascript
+
+const nums = ['cero','uno','dos','tres','cuatro']
+
+nums.forEach((item,index,array) => {
+  console.log({item,index,array})
 })
 
-// [ 2 ,4 ,5 ,24 ,100 ]
-
 ```
 
-2. Metodo ForEach
+4. Metodo Map
 
-El metodo ***forEach*** se utiliza para realizar un bucle dentro de un Array digamos que es lo mismo que usar los bucles normales que nos proporciona JavaScript, pero cambiando la sintaxis y la velocidad de ejecucion. Dicho metodo recibe como parametro una funcion de **Callback** en la que se pasa como parametros el **item** y opcionalmente el **indice**, dentro de la funcion Callback se puede ir iterando el Arreglo.
-
-> Ten en cuenta que el forEach recorre todos los items 🔂
+El metodo ***map*** se usa en JavaScript para crear un bucle pero solo para *Arrays* esto quiere decir que se necesita de un array para poder usarlo. La forma en la que se usa el metodo ***map*** llamandola y pasandole como *parametros* una ***callback*** donde funcionara el metodo ya que la misma retorna un nuevo array.
 
 ``` javascript
 
-const list = [ 'Jota', 'Alex', 'Beto' ];
+const array = ['🐶','🐱','🐷','🐭','🐮']
 
-list.forEach(( li, i ) => {  // (li)hace referencia al item actual (i) al indice actual
-	console.log({ li, i })
-})
+function loopWithMap (array) {
+  return array.map(item => console.log(item))
+}
 
-// { li: 'Jota', i: 0 }
-// { li: 'Alex', i: 1 }
-// { li: 'Beto', i: 2 }
+loopWithMap(array) /// '🐶','🐱','🐷','🐭','🐮'
 
 ```
+> El metodo ***map*** es usado para crear un array de otro
 
-3. Reduce
+5. Recursividad
 
-El metodo ***reduce*** sirve como su nombre lo indica para reducir un Array. Dicho metodo recibe *dos parametros* una funcion **Callback** donde se le pasa como parametros el **item y el accumulador** ademas de que se le indica que debera retornar, y por otro lado el tipo de dato con el cual se piensa manipular.
+La recursividad es una de las herramientas o instrucciones de programacion que nadie suele nombrar a menos que seas ya un **Senior** con años de experiencia. Te estaras preguntando que es la recursividad pues dejame expliartelo asi: Es una funcion con un ***numero de iteraciones*** y un ***indice***, lo primero que hace la funcion es revisar la condicional si esta se cumple entonces el bucle termina, sino entonces continua llamando de nuevo a la funcion pero incrementando el ***indice***. En resumen la *recursividad* es una forma de crear un bucle desde cero, la forma en la que funciona es llamandose a si misma.
 
 ``` javascript
 
-const nums = [ 2 ,3 ,5 ,6 ,3 ,8 ];
-const buzz = nums.reduce(( acc, item ) => {  // accumulador y item
-	return acc + item
-},0)  // tipo de dato
+const array = ['🐶','🐱','🐷','🐭','🐮']
 
-// 27
+function loopOfRecursivity (num, i=0) {
+  if(i == num) return
+  console.log(array[i])
+  loopOfRecursivity(num, i + 1)
+}
+
+loopOfRecursivity(5) /// '🐶','🐱','🐷','🐭','🐮'
 
 ```
 
-La mayoria de los metodos en **Arrays** de *Javascript* se utilizan en el dia a dia, ya que los mismos nos ayudaran a solucionar diferentes problemas relacionados con esta **tipo de dato** sin necesidad de siempre utilizar bucles y bucles ralentizando nuestras funciones sin necesidad. Es importante que dichos metodos los usemos y apliquemos en cada uno de sus **Casos de Uso** para fortalezer nuestro codigo y nuestra logica.
+> Al igual que el bucle while deber tener cuidado que la condicion no se cumpla siempre sino se creara un bucle infinito
+
+Estos son algunos de los bucles utilizados en el dia a dia de un programador JavaScript, Ojo en este articulo dejamos de lado el metodo ***reduce***, ***groupBy***, ***filter***, etc, ya que su uso es mas estricto que el de un bucle normal.

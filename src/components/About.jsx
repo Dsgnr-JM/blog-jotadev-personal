@@ -3,7 +3,7 @@ import ImgLogo from '../assets/IMG-20221202-WA0001.jpg'
 export default function About ({ icon }) {
   return (
     <section className='flex my-20 w-full h-auto p-8 rounded dark:bg-slate-900 shadow-black/5 shadow-xl items-center bg-gray-200/30'>
-      <div className='w-[60%] [&>p]:md:text-sm [&>p]:text-xs [&>p]:text-pretty [&>p]:dark:text-gray-50/70 [&>p]:text-black/70'>
+      <div className='w-[60%] [&>p]:md:text-base [&>p]:text-sm [&>p]:text-pretty [&>p]:dark:text-gray-50/70 [&>p]:text-black/70'>
         <h1 className='text-2xl dark:text-white text-black font-extrabold mb-2 flex items-center mb-4'>
           Sobre mi {icon}
         </h1>

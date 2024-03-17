@@ -7,16 +7,17 @@ import { Helmet } from 'react-helmet'
 
 export default function Post () {
   const { name } = useParams()
+  const title = urlReplaceToLines(name, false)
   useEffect(()=>{
     window.scrollTo(0,0)
   },[])
   return (
     <>
       <Helmet>
-        <title>{ name && urlReplaceToLines(name, false) } || JotaDev</title>
+        <title>{ name && title } || JotaDev</title>
         <meta name="description" content={`Esta es la informacion optenida sobre el articulo, en este caso es sobre ${ name && urlReplaceToLines(name, false) }`}></meta>
       </Helmet>
-      <PostContainer title={urlReplaceToLines(name, false)} />
+      <PostContainer title={title} />
       <Footer />
     </>
   )
