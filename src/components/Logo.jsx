@@ -14,8 +14,8 @@ function LogoDark ({ className }) {
 	        y1={55.84}
 	        gradientUnits="userSpaceOnUse"
 	      >
-	        <stop offset={0} stopColor="#463E78" />
-	        <stop offset={1} stopColor="#1E3866" />
+	        <stop offset={0} stopColor="#573E78" />
+	        <stop offset={1} stopColor="#1E3466" />
 	      </linearGradient>
 	    </defs>
 	    <path
@@ -42,7 +42,7 @@ function LogoLight ({ className }) {
 		        y1={55.84}
 		        gradientUnits="userSpaceOnUse"
 		      >
-		        <stop offset={0} stopColor="#D2C9F2" />
+		        <stop offset={0} stopColor="#EEC9F2" />
 		        <stop offset={1} stopColor="#dcf1fa" />
 		      </linearGradient>
 		    </defs>
