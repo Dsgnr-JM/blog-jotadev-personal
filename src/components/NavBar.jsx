@@ -20,7 +20,7 @@ export default function Header () {
 
   return (
     <header className='fixed top-0 left-0 w-full h-14 dark:bg-gray-900/50 backdrop-blur bg-slate-100/80 shadow-xl shadow-gray-900/5 border-b-2 border-white/20 z-20'>
-      <div className='main md:w-[50rem] md:px-0 px-2 w-full'>
+      <div className='main md:w-[50rem] md:px-0 px-6 w-full'>
         <div className='flex items-center justify-between w-full'>
           <div className='flex items-center'>
             {isDark ? (
@@ -42,7 +42,7 @@ export default function Header () {
               />
             )}
             <div className="w-full flex items-center relative">
-              <div className="md:static  md:visible invisible absolute md:blur-0 blur-xl top-[200%] right-0 flex-1 flex md:flex-row flex-col md:items-center items-end transition" ref={btnMain}>
+              <div className="md:static  md:visible invisible absolute md:blur-0 md:bg-transparent bg-white/5 rounded backdrop:blur-xl md:p-0 p-2 top-[200%] right-0 flex-1 flex md:flex-row flex-col md:items-center items-end transition" ref={btnMain}>
                 <NavLink to='/' className='py-1 px-2 rounded transition-all' aria-label='Ir a la pestaña inicio'>
                   Inicio
                 </NavLink>
