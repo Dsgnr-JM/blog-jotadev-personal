@@ -8,3 +8,7 @@ Este es un blog personal para mi, este blog esta desarrollado con *React*.
 2. react-router
 3. react-syntax-highlight
 4. markdown-to-jsx
+
+# Falta por implementar
+
+[] full responsive
