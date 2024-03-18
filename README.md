@@ -1,8 +1,10 @@
-# React + Vite
+# Blog Personal de JotaDev
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este es un blog personal para mi, este blog esta desarrollado con *React*.
 
-Currently, two official plugins are available:
+# Libs utilizadas
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+1. react
+2. react-router
+3. react-syntax-highlight
+4. markdown-to-jsx
