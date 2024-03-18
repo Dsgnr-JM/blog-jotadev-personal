@@ -3,9 +3,11 @@ import { useState, useEffect } from 'react'
 import Code from './Code'
 import { Tags, Tag } from './Tags'
 import { SkeletonPost } from './Skeleton'
+import Footer from './Footer';
 
 function PostContainer ({ title, file }) {
   const [postContent, setPostContent] = useState(null)
+  const [links, setLinks] = useState([])
   useEffect(() => {
     async function getData (file) {
       const data = await fetch(`.${file}`)
@@ -13,19 +15,24 @@ function PostContainer ({ title, file }) {
       return setPostContent(dataArticle)
     }
     async function  fetchArticle  () {
+      setPostContent(null)
+      setLinks([])
       const fetching = await fetch("../data.json")
       const data = await fetching.json()
       const file = await data.find(i => i.title_article == title)
+      const urls = [data[file.id - 1]?.title_article, data[file.id + 1]?.title_article]
+      setLinks(urls)
       getData(await file.file)
     }
     fetchArticle()
-  }, [])
+  }, [title])
 
   return (
     <article className='pt-24'>
       <div className='main md:w-[50rem] w-full md:px-0 px-2'>
         <div className='w-full'>
           {postContent ? (
+            <>
             <Markdown
               options={{
                 overrides: {
@@ -38,7 +45,7 @@ function PostContainer ({ title, file }) {
                   p: {
                     props: {
                       className:
-                        'md:text-base text-sm dark:text-gray-50/85 text-gray-700/95 leading-6'
+                        'md:text-base text-sm dark:text-gray-50/85 text-gray-700/95 md:leading-7 leading-6'
                     }
                   },
                   h1: {
@@ -73,6 +80,8 @@ function PostContainer ({ title, file }) {
             >
               {postContent}
             </Markdown>
+            <Footer prevTitle={links[0]} nextTitle={links[1]}/>
+            </>
           ) : (
             <SkeletonPost />
           )}
