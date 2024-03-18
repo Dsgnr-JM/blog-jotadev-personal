@@ -1,5 +1,4 @@
 import PostContainer from '../components/PostContainer'
-import Footer from '../components/Footer'
 import { useParams } from 'react-router-dom'
 import { urlReplaceToLines } from '../DinamicActionsSEO'
 import { useEffect } from 'react';
@@ -18,7 +17,6 @@ export default function Post () {
         <meta name="description" content={`Esta es la informacion optenida sobre el articulo, en este caso es sobre ${ name && urlReplaceToLines(name, false) }`}></meta>
       </Helmet>
       <PostContainer title={title} />
-      <Footer />
     </>
   )
 }

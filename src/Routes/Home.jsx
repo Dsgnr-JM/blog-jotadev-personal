@@ -34,9 +34,9 @@ export default function Home() {
           content='Este es un blog sobre desarrollado web, pensado para ser usado como guia de referencia rapida por los programadores ya sean trainner, junior, midnior, senior. Los lenguages abarcados son HTML, CSS, JavaScript, React, TailwindCss, PHP, MySQL'
         />
       </Helmet>
-      <header className='w-full flex flex-col h-screen'>
-        <div className='w-full flex justify-between h-full items-center -mb-16 md:gap-0 gap-4'>
-          <div className='md:max-w-[50%] max-w-max flex-auto'>
+      <header className='w-full flex flex-col md:h-screen h-[90vh]'>
+        <div className='w-full flex md:justify-between justify-center md:flex-row flex-col h-full items-center -mb-16 md:gap-0 gap-4'>
+          <div className='md:max-w-[50%] max-w-max md:flex-auto md:text-left text-center md:order-1 order-2'>
             <h1 className='md:text-7xl text-6xl font-semibold dark:text-white text-black mb-3'>
               Jota
               <strong className='font-extrabold bg-gradient-to-r from-blue-600 to-cyan-500 text-transparent bg-clip-text'>
@@ -52,7 +52,7 @@ export default function Home() {
               <span className='dark:text-indigo-300 text-indigo-600'>
                 {' '}17 años
               </span>
-              , es un placer conocerte. Si te preguntas el porque de este Blog {' '}
+              , es un placer conocerte.<span className="md:inline hidden">Si te preguntas el porque de este Blog {' '}
               <span className='dark:text-emerald-200 text-emerald-600'></span>
               pues esta pensado para que puedas usarlo como una
               <span className='dark:text-emerald-400 text-emerald-700'>
@@ -62,15 +62,17 @@ export default function Home() {
                 {' '}
                 de referencia rapida.
               </span>
+              </span>
             </p>
           </div>
-          <div className='relative'>
-            <LogoDark className='md:size-48 size-32 rotate-6 md:mr-8' />
-            <LogoDark className='md:size-48 size-32 rotate-6 md:mr-8 blur-2xl absolute top-0 left-0 opacity-40 scale-120' />
+          <div className='relative md:order-2 order-1 md:my-0 my-4'>
+            <LogoDark className='md:size-48 size-40 rotate-6 md:mr-8' />
+            <LogoDark className='md:size-48 size-40 rotate-6 md:mr-8 blur-2xl absolute inset-0 opacity-40 scale-120' />
           </div>
         </div>
         <div className='flex justify-center gap-4 w-full pb-12'>
           <a
+            target='_blank'
             href='https://github.com/Dsgnr-JM'
             aria-label='Redireccionar a el github de JotaDev'
             className='flex gap-2 items-center px-2 py-1.5 dark:bg-gray-100/10 bg-gray-600/10 rounded-sm group hover:bg-blue-500 transition duration-300'
@@ -78,6 +80,7 @@ export default function Home() {
             <FaGithub className='dark:text-white text-blue-600 size-6 group-hover:text-gray-200 group-hover:dark:text-gray-100' />
           </a>
           <a
+            target='_blank'
             href='https://www.discord.com/JotaDev'
             aria-label='Redireccionar a el grupo de Discord de JotaDev'
             className='flex gap-2 items-center px-2 py-1.5 dark:bg-gray-100/10 bg-gray-600/10 rounded-sm group hover:bg-blue-500 transition duration-300'
@@ -85,6 +88,7 @@ export default function Home() {
             <FaDiscord className='dark:text-white text-blue-600 size-6 group-hover:text-gray-200 group-hover:dark:text-gray-100' />
           </a>
           <a
+            target="_blank"
             href='https://www.whatsapp.org'
             aria-label='Redireccionar a el grupo de WhatsApp "Programadores"'
             className='flex gap-2 items-center px-2 py-1.5 dark:bg-gray-100/10 bg-gray-600/10 rounded-sm group hover:bg-blue-500 transition duration-300'
