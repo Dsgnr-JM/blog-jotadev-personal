@@ -13,15 +13,16 @@ import About from '../components/About'
 import { dataArticlesHot, selectIcon } from '../store/data'
 import { SkeletonHot } from '../components/Skeleton'
 import { Helmet } from 'react-helmet'
-import { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react'
+import Badge from '../components/Badge.jsx'
 
 export default function Home() {
   const [hotArticles, setHotArticles] = useState(null)
   useEffect(() => {
-    async function getArticlesHot () {
+    async function getArticlesHot() {
       const fetching = await fetch(`./data.json`)
       const data = await fetching.json()
-      setHotArticles(data.slice(0,4))
+      setHotArticles(data.slice(0, 4))
     }
     getArticlesHot()
   }, [])
@@ -43,29 +44,38 @@ export default function Home() {
                 Dev
               </strong>
             </h1>
-            <p className='md:text-base text-sm dark:text-gray-100 text-gray-900/90'>
-              Bienvenido, soy JotaDev {' '}
+            <p className='text-base dark:text-gray-100 text-gray-900/90'>
+              Bienvenido, soy JotaDev{' '}
               <span className='dark:text-blue-400 text-blue-600'>
                 desarrollador Web{' '}
               </span>
               desde los
               <span className='dark:text-indigo-300 text-indigo-600'>
-                {' '}17 años
-              </span>
-              , es un placer conocerte.<span className="md:inline hidden">Si te preguntas el porque de este Blog {' '}
-              <span className='dark:text-emerald-200 text-emerald-600'></span>
-              pues esta pensado para que puedas usarlo como una
-              <span className='dark:text-emerald-400 text-emerald-700'>
-                {' '}guia
-              </span>
-              <span className='dark:text-sky-300 text-sky-600'>
                 {' '}
-                de referencia rapida.
+                17 años
               </span>
+              , es un placer conocerte.
+              <span className='md:inline hidden'>
+                Si te preguntas el porque de este Blog{' '}
+                <span className='dark:text-emerald-200 text-emerald-600'></span>
+                pues esta pensado para que puedas usarlo como una
+                <span className='dark:text-emerald-400 text-emerald-700'>
+                  {' '}
+                  guia
+                </span>
+                <span className='dark:text-sky-300 text-sky-600'>
+                  {' '}
+                  de referencia rapida.
+                </span>
               </span>
+              <div className="flex gap-1 mt-4 items-center md:justify-start justify-center">
+                <Badge title="❤ Frontend"/>
+                <Badge title="🗽 Backend"/>
+                <Badge title="📲 SEO"/>
+              </div>
             </p>
           </div>
-          <div className='relative md:order-2 order-1 md:my-0 my-4'>
+          <div className='relative md:order-2 order-1 md:my-0 my-6'>
             <LogoDark className='md:size-48 size-40 rotate-6 md:mr-8' />
             <LogoDark className='md:size-48 size-40 rotate-6 md:mr-8 blur-2xl absolute inset-0 opacity-40 scale-120' />
           </div>
@@ -88,7 +98,7 @@ export default function Home() {
             <FaDiscord className='dark:text-white text-blue-600 size-6 group-hover:text-gray-200 group-hover:dark:text-gray-100' />
           </a>
           <a
-            target="_blank"
+            target='_blank'
             href='https://www.whatsapp.org'
             aria-label='Redireccionar a el grupo de WhatsApp "Programadores"'
             className='flex gap-2 items-center px-2 py-1.5 dark:bg-gray-100/10 bg-gray-600/10 rounded-sm group hover:bg-blue-500 transition duration-300'
@@ -103,13 +113,17 @@ export default function Home() {
           <FaFireAlt className='size-6 dark:fill-sky-300 fill-sky-400 ml-2' />
         </h1>
         <ol>
-          {
-            hotArticles
-            ? hotArticles.map((article, i) => (
-            <ArticlesHot key={i} icon={selectIcon(article.language).icon} title={article.title_article}/>
+          {hotArticles ? (
+            hotArticles.map((article, i) => (
+              <ArticlesHot
+                key={i}
+                icon={selectIcon(article.language).icon}
+                title={article.title_article}
+              />
             ))
-            : <SkeletonHot/>
-          }
+          ) : (
+            <SkeletonHot />
+          )}
         </ol>
       </div>
       <div className='flex flex-col items-center md:h-screen h-[80vh] mt-9 w-full'>
