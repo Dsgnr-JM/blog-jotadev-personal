@@ -4,6 +4,8 @@ import Code from './Code'
 import { Tags, Tag } from './Tags'
 import { SkeletonPost } from './Skeleton'
 import Footer from './Footer';
+import Badge from './Badge'
+import Author from './Author'
 
 function PostContainer ({ title, file }) {
   const [postContent, setPostContent] = useState(null)
@@ -39,19 +41,24 @@ function PostContainer ({ title, file }) {
                   li: {
                     props: {
                       className:
-                        'md:text-2xl text-xl mt-12 mb-1 font-bold tracking-wider dark:text-sky-400 text-blue-500'
+                        'text-2xl mt-7 mb-1 font-bold tracking-wider dark:text-sky-400 text-blue-500'
+                    }
+                  },
+                  h2:{
+                    props:{
+                      className: 'text-2xl text-xl mt-8 mb-1 font-bold tracking-wider dark:text-white/90 text-black/90'
                     }
                   },
                   p: {
                     props: {
                       className:
-                        'md:text-base text-sm dark:text-gray-50/85 text-gray-700/95 md:leading-7 leading-6'
+                        'text-base dark:text-gray-50/85 text-gray-700/95 md:leading-7 leading-6 my-3'
                     }
                   },
                   h1: {
                     props: {
                       className:
-                        'font-extrabold md:text-3xl text-2xl mb-1 dark:text-gray-100 text-gray-900 md:w-[70%] w-[90%]'
+                        'font-extrabold text-3xl dark:text-gray-100 text-gray-900 md:w-[70%] w-[90%] py-1'
                     }
                   },
                   blockquote: {
@@ -66,14 +73,29 @@ function PostContainer ({ title, file }) {
                   Tag: {
                     component: Tag
                   },
+                  Badge: {
+                    component: Badge
+                  },
+                  a:{
+                    props:{
+                      className: "dark:hover:text-sky-400 hover:text-blue-500 underline"
+                    }
+                  },
+                  img:{
+                    props:{
+                      className: "w-full object-cover h-auto mb-2 rounded-md max-h-96"
+                    }
+                  },
                   code: {
                     component: Code
                   },
-                  strong: {
+                  mark: {
                     props: {
-                      className:
-                      "[&>em]:font-normal [&>em]:font-mono [&>em]:not-italic [&>em]:px-1 [&>em]:dark:bg-gray-700 [&>em]:dark:text-white/80 [&>em]:bg-gray-300/70 [&>em]:text-dark/80 [&>em]:rounded "
+                      className: "font-normal font-mono not-italic px-1 dark:bg-gray-700 dark:text-white/80 bg-gray-300/70 text-dark/80 rounded "
                     }
+                  },
+                  Author: {
+                    component: Author
                   }
                 }
               }}

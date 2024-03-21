@@ -23,13 +23,19 @@ function SkeletonHot () {
 function SkeletonPost() {
   return (
     <div role='status' className='space-y-2.5 animate-pulse w-full'>
-      <div className='flex items-center w-full max-w-[70%]'>
-        <div className='h-8 bg-gray-300 rounded-md dark:bg-gray-600 w-full'></div>
-      </div>
-      <div className='flex items-center w-full max-w-[110px] gap-1 pb-4'>
+      <div className='flex items-center w-full max-w-[110px] gap-1 pb-1'>
         <div className='h-5 bg-gray-300 rounded-full dark:bg-gray-600 w-full'></div>
         <div className='h-5 bg-gray-200 rounded-full dark:bg-gray-700 w-full'></div>
         <div className='h-5 bg-gray-300 rounded-full dark:bg-gray-600 w-full'></div>
+      </div>
+      <div className='flex items-center w-full max-w-[70%] mb-4'>
+        <div className='h-8 bg-gray-300 rounded-md dark:bg-gray-600 w-full'></div>
+      </div>
+      <div className="pb-4">
+        <div className='h-5 bg-gray-200 rounded-full dark:bg-gray-700 w-36'></div>       
+      </div>
+      <div className='flex items-center w-full h-64 gap-2'>
+        <div className='h-full bg-gray-200 rounded-xl dark:bg-gray-700 w-full'></div>
       </div>
       <div className='flex items-center w-full gap-2'>
         <div className='h-5 bg-gray-200 rounded-full dark:bg-gray-700 w-full'></div>

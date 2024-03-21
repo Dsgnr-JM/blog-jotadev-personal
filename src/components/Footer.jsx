@@ -1,7 +1,7 @@
 import {
-	FaArrowLeft,
-	FaArrowRight,
-	FaFacebook,
+	FaChevronRight,
+	FaChevronLeft,
+	 FaFacebook,
 	FaInstagram,
 	FaGithub,
 	FaLinkedin,
@@ -10,6 +10,7 @@ import {
 	FaRegThumbsDown,
 	FaRegThumbsUp
 } from 'react-icons/fa'
+FaChevronRight
 import { Link } from 'react-router-dom';
 import { urlReplaceToLines } from '../DinamicActionsSEO';
 
@@ -23,7 +24,6 @@ function Button ({ like }) {
 
 function Footer ({prevTitle, nextTitle}) {
 	const url = window.location.href
-	console.log(prevTitle, nextTitle)
 	return (
 		<div className='main md:w-[50rem] w-full md:px-0 px-2 flex-col gap-4 py-6'>
 			{/*<div className='flex h-full justify-start gap-4 items-center mb-8 mt-2 w-full'>
@@ -39,11 +39,11 @@ function Footer ({prevTitle, nextTitle}) {
 				{
 					prevTitle ?
 						<Link
-							to={`../post/${urlReplaceToLines(prevTitle, true)}`}
+							to={`../blog/${urlReplaceToLines(prevTitle, true)}`}
 							aria-label={`El enlace lleva a ${prevTitle}`}
 							className='py-1.5 px-2 border-[1px] border-emerald-500 dark:border-emerald-600 dark:text-emerald-500 text-emerald-600 rounded font-semibold tracking-wider flex items-center gap-1 hover:bg-emerald-600 dark:hover:bg-emerald-500 500  dark:hover:text-slate-800 hover:text-slate-100 hover:shadow-xl text-sm transition '
 						>
-							<FaArrowLeft />
+							<FaChevronLeft />
 							{prevTitle}
 						</Link>
 					:
@@ -52,23 +52,23 @@ function Footer ({prevTitle, nextTitle}) {
 				{
 					nextTitle ?
 						<Link
-							to={`../post/${urlReplaceToLines(nextTitle, true)}`}
+							to={`../blog/${urlReplaceToLines(nextTitle, true)}`}
 							aria-label={`El enlace lleva a ${nextTitle}`}
 							className='py-1.5 px-2 border-[1px] dark:border-blue-400 border-blue-500 dark:text-blue-400 text-blue-500 rounded font-semibold tracking-wider flex items-center gap-1 dark:hover:bg-blue-400 hover:bg-blue-500 dark:hover:text-slate-800 hover:text-slate-100 hover:shadow-xl text-sm transition'
 						>
 							{nextTitle}
-							<FaArrowRight />
+							<FaChevronRight />
 						</Link>
 						:
 						<span></span>
 				}
 			</div>
-			<div className='w-full flex items-center justify-center gap-4 mt-20 text-white'>
+			<div className='w-full flex items-center justify-center gap-4 mt-20 dark:text-white text-black'>
 				<a target='_blank' href={`https://m.facebook.com/sharer/sharer.php?u=${url}`}>
-					<FaFacebook className='fill-current size-6 hover:fill-indigo-700 hover:scale-110 transition text-white' />
+					<FaFacebook className='fill-current size-6 hover:fill-indigo-700 hover:scale-110 transition' />
 				</a>
 				<a target='_blank' href='#'>
-					<FaInstagram className='fill-current size-6 hover:fill-white/90 hover:scale-110 transition' />
+					<FaInstagram className='fill-current size-6 hover:fill-amber-400 hover:scale-110 transition' />
 				</a>
 				<a target='_blank' href={`https://www.linkedin.com/sharing/share-offsite?url=${url}&mini=true#overlay_share-modal`}>
 					<FaLinkedin className='fill-current size-6 hover:fill-sky-600 hover:scale-110 transition' />
@@ -77,7 +77,7 @@ function Footer ({prevTitle, nextTitle}) {
 					<FaGithub className='fill-current size-6 hover:fill-gray-400 hover:scale-110 transition' />
 				</a>
 				<a target='_blank' href='#'>
-					<FaTwitter className='fill-current size-6 hover:fill-sky-500 hover:scale-110 transition' />
+					<FaWhatsapp className='fill-current size-6 hover:fill-green-500 hover:scale-110 transition' />
 				</a>
 			</div>
 			<p className='text-center text-gray-900/70 text-sm dark:text-slate-100/70'>

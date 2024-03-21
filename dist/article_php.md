@@ -1,9 +1,12 @@
+<Tags>
+  <Badge title="html" tag="html"/>
+  <Badge title="php" tag="php"/>
+  <Badge title="dev" tag="dev"/>
+</Tags>
+
 # PHP se adueña de la Web de nuevo 🔓
 
-<Tags>
-  <Tag type="html">HTML</Tag>
-  <Tag type="php">PHP</Tag>
-</Tags>
+<Author text="Updated: March 21, 24">
 
 Todos en su momento pensamos que el viejo confiable PHP esta muerto ☠ pero que te parece si te digo que no, que PHP acaba de recuperar el trono y ni Javascript o Html podran arrebatarle de nuevo este reino al Viejo Rey 🌟, quedate que este articulo entederas cuales son las razones por la que PHP ahora es el nuevo Master de la Web 🔺.
 

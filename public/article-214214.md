@@ -1,8 +1,12 @@
-# Css moderno esta completamente loco
 <Tags>
-  <Tag type="css">CSS</Tag>
-  <Tag type="html">HTML</Tag>
+  <Badge title="html" tag="html"/>
+  <Badge title="css" tag="css"/>
+  <Badge title="tailwind" tag="tailwind"/>
 </Tags>
+
+# Css moderno esta completamente loco
+
+<Author text="Updated: March 22, 24">
 
 **Css moderno esta completamente loco!!**, ese es el titulo y que no es para menos ya que *CSS 2023* esta realmente chetado y con esto me refiero a que se puede diseñar cualquier cosa que pienses y que hace unos años era literalmente imposible sin usar librerias de js. En este post te mostrare cuales son las caracteristicas que hacen que el **CSS actual** sea una locura.
 

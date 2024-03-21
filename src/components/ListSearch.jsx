@@ -1,4 +1,4 @@
-import { FaChevronRight, FaArrowRight } from 'react-icons/fa'
+import { FaChevronRight } from 'react-icons/fa'
 import { useEffect } from 'react'
 import Rating from './Rating'
 import { Link } from 'react-router-dom'
@@ -64,11 +64,11 @@ function ListItem({ icon, title, stars }) {
 
   return (
     <Link
-      to={`/post/${urlTitle}`}
+      to={`/blog/${urlTitle}`}
       onClick={ () => setSearchProp('') }
       className='w-full flex px-4 py-3 gap-2 dark:bg-white/10 bg-gray-300/20 dark:hover:bg-white/20 hover:bg-gray-200/70 justify-between items-center text-black rounded transition-colors'
     >
-      {icon}
+      <span className="size-6">{icon}</span>
       <div className='flex w-full flex-1'>
         <div className='flex gap-4 justify-start w-full'>
           <h2 className='text-sm dark:text-white/70 md:max-w-[80%] max-w-[70%] md:max-h-auto max-h-4 text-pretty overflow-hidden text-gray-700 uppercase font-semibold'>
@@ -78,7 +78,7 @@ function ListItem({ icon, title, stars }) {
             { stars && <Rating stars={stars} />}
           </div>
         </div>
-        <FaArrowRight className='fill-black dark:fill-white' />
+        <FaChevronRight className='fill-black dark:fill-white' />
       </div>
     </Link>
   )

@@ -10,7 +10,7 @@ import {
 import Bento from '../components/Bento'
 import ArticlesHot from '../components/ArticlesHot'
 import About from '../components/About'
-import { dataArticlesHot, selectIcon } from '../store/data'
+import { selectIcon } from '../store/data'
 import { SkeletonHot } from '../components/Skeleton'
 import { Helmet } from 'react-helmet'
 import { useEffect, useState } from 'react'
@@ -22,7 +22,7 @@ export default function Home() {
     async function getArticlesHot() {
       const fetching = await fetch(`./data.json`)
       const data = await fetching.json()
-      setHotArticles(data.slice(0, 4))
+      setHotArticles(data.reverse().slice(0, 4))
     }
     getArticlesHot()
   }, [])
@@ -34,6 +34,11 @@ export default function Home() {
           name='description'
           content='Este es un blog sobre desarrollado web, pensado para ser usado como guia de referencia rapida por los programadores ya sean trainner, junior, midnior, senior. Los lenguages abarcados son HTML, CSS, JavaScript, React, TailwindCss, PHP, MySQL'
         />
+        <meta property="og:title" content='Bienvenido a mi Blog JotaDev'></meta>
+        <meta property="og:description" content='Este es un blog sobre desarrollado web, pensado para ser usado como guia de referencia rapida por los programadores ya sean trainner, junior, midnior, senior. Los lenguages abarcados son HTML, CSS, JavaScript, React, TailwindCss, PHP, MySQL'></meta>
+        <meta property="og:image" content='./og-blog.PNG'></meta>
+        <meta property="og:url" content="www.jotadev0.vercel.app"></meta>
+        <meta property="og:type" content="website"/>
       </Helmet>
       <header className='w-full flex flex-col md:h-screen h-[90vh]'>
         <div className='w-full flex md:justify-between justify-center md:flex-row flex-col h-full items-center -mb-16 md:gap-0 gap-4'>
@@ -68,11 +73,11 @@ export default function Home() {
                   de referencia rapida.
                 </span>
               </span>
-              <div className="flex gap-1 mt-4 items-center md:justify-start justify-center">
+              <span className="flex gap-1 mt-4 items-center md:justify-start justify-center">
                 <Badge title="❤ Frontend"/>
                 <Badge title="🗽 Backend"/>
                 <Badge title="📲 SEO"/>
-              </div>
+              </span>
             </p>
           </div>
           <div className='relative md:order-2 order-1 md:my-0 my-6'>

@@ -16,7 +16,7 @@ const router = [
     element: <Home />
   },
   {
-    path: '/post/:name',
+    path: '/blog/:name',
     element: <Post />
   },
   {

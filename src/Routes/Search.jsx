@@ -25,6 +25,11 @@ export default function Search () {
           name='description'
           content='Esta es la seccion de busqueda del Blog es utiliza para buscar en el registro de la base de datos los lenguages, articulos tendencias y articulos de interes, sin importar el lenguage'
         />
+        <meta property="og:title" content={`Busqueda para: ${param && urlReplaceToLines(param, false)} || JotaDev`}></meta>
+        <meta property="og:description" content='Esta es la seccion de busqueda del Blog es utiliza para buscar en el registro de la base de datos los lenguages, articulos tendencias y articulos de interes, sin importar el lenguage'></meta>
+        <meta property="og:image" content='./og-blog.PNG'></meta>
+        <meta property="og:url" content="www.jotadev0.vercel.app"></meta>
+        <meta property="og:type" content="website"/>
       </Helmet>
       <div className='main md:w-[50rem] w-full md:px-0 px-2 flex-col gap-3'>
         <InputSearch

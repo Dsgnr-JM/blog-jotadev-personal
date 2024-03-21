@@ -1,9 +1,12 @@
-# Formas de recorrer arrays en JavaScript 🍭
 <Tags>
-  <Tag type="js">JS</Tag>
-  <Tag type="alg">ALG</Tag>
-  
+  <Badge title="javascript" tag="javascript"/>
+  <Badge title="node" tag="node"/>
+  <Badge title="react" tag="react"/>
 </Tags>
+
+# Formas de recorrer arrays en JavaScript 🍭
+
+<Author text="Updated: March 20, 24">
 
 Recorrer un array es una tarea que aunque parece simple puede volver compleja, ademas que es sin duda una de las tareas mas cotidianas que veremos en el mundo de la programacion. E javaScript existen diferentes metodos y maneras de recorrer un array, por ello en este articulo te mostraremos las diferentes Maneras de Recorrer un Array en JS, desde el viejo bucle ***For*** hasta la herramienta de la ***Recursividad***. Si estas listo para aprender mas sobre programacion pues empezemos si mas.
 
