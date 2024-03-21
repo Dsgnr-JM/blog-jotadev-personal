@@ -9,5 +9,5 @@ ReactDOM.createRoot(document.getElementById('root')).render(
   <HashRouter>
     <Analytics/>
     <App />
-  </BrowserRouter>
+  </HashRouter>
 )
