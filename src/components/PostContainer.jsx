@@ -11,6 +11,8 @@ function PostContainer ({ title, file }) {
   const [postContent, setPostContent] = useState(null)
   const [links, setLinks] = useState([])
   useEffect(() => {
+    window.scrollTo(0,0)
+    
     async function getData (file) {
       const data = await fetch(`.${file}`)
       const dataArticle = await data.text()
@@ -41,30 +43,30 @@ function PostContainer ({ title, file }) {
                   li: {
                     props: {
                       className:
-                        'text-2xl mt-7 mb-1 font-bold tracking-wider dark:text-sky-400 text-blue-500'
+                        'text-2xl mt-8 pt-1 font-bold tracking-wider dark:text-sky-400 text-blue-500'
                     }
                   },
                   h2:{
                     props:{
-                      className: 'text-2xl text-xl mt-8 mb-1 font-bold tracking-wider dark:text-white/90 text-black/90'
+                      className: 'text-2xl mt-8 font-extrabold tracking-wider dark:text-white/90 text-black/90'
                     }
                   },
                   p: {
                     props: {
                       className:
-                        'text-base dark:text-gray-50/85 text-gray-700/95 md:leading-7 leading-6 my-3'
+                        'text-base dark:text-gray-50/85 text-gray-700/95 md:leading-8 leading-6 my-4'
                     }
                   },
                   h1: {
                     props: {
                       className:
-                        'font-extrabold text-3xl dark:text-gray-100 text-gray-900 md:w-[70%] w-[90%] py-1'
+                        'font-extrabold text-3xl dark:text-gray-100 text-gray-900 md:w-[72%] w-[90%] py-1'
                     }
                   },
                   blockquote: {
                     props: {
                       className:
-                        "relative flex my-3 before:content-[''] gap-1 before:w-[5px] before:h-auto before:bg-sky-500 after:dark:bg-sky-400 before:rounded-xl before:block  [&>p]:rounded [&>p]:py-2 [&>p]:px-1 [&>p]:leading-0 [&>p]:bg-gray-200/90 [&>p]:dark:bg-gray-700/90 w-full h-full [&>p]:flex-1 [&>p]:m-0"
+                        "relative flex my-3 before:content-[''] flex gap-2 before:w-[5px] before:h-auto before:bg-sky-500 after:dark:bg-sky-400 before:rounded-xl before:block  [&>p]:rounded [&>p]:py-2 [&>p]:px-1 [&>p]:leading-0 [&>p]:bg-gray-200/90 [&>p]:dark:bg-gray-700/90 w-full h-full [&>p]:flex-1 [&>p]:m-0"
                     }
                   },
                   Tags: {

@@ -92,20 +92,30 @@ function SkeletonPost() {
 function SkeletonChallenge() {
   return (
     <div role='status' className='space-y-2.5 animate-pulse w-full'>
-      <div className='w-full grid grid-cols-6 h-[80vh] gap-2'>
-        <div className='col-span-3 row-span-2 bg-gray-200 rounded dark:bg-gray-600'></div>
-        <div className='col-span-1 row-span-1 bg-gray-200 rounded dark:bg-gray-600'></div>
-        <div className='col-span-2 row-span-1 bg-gray-200 rounded dark:bg-gray-600'></div>
-        <div className='col-span-2 bg-gray-200 rounded dark:bg-gray-600'></div>
-        <div className='col-span-1 row-span-1 bg-gray-200 rounded dark:bg-gray-600'></div>
-        <div className='col-span-1 bg-gray-200 rounded dark:bg-gray-600'></div>
-        <div className='col-span-1 bg-gray-200 rounded dark:bg-gray-600'></div>
-        <div className='col-span-2 row-span-2 bg-gray-200 rounded dark:bg-gray-600'></div>
-        <div className='col-span-2 row-span-2 bg-gray-200 rounded dark:bg-gray-600'></div>
-        <div className='col-span-2 row-span-1 bg-gray-200 rounded dark:bg-gray-600'></div>
+      <div className='w-full grid md:grid-cols-5 grid-cols-2 gap-2'>
+        <div className='bg-gray-200 rounded dark:bg-gray-600 h-44'></div>
+        <div className='bg-gray-200 rounded dark:bg-gray-600 h-44'></div>
+        <div className='bg-gray-200 rounded dark:bg-gray-600 h-44'></div>
+        <div className='bg-gray-200 rounded dark:bg-gray-600 h-44'></div>
+        <div className='bg-gray-200 rounded dark:bg-gray-600 h-44'></div>
       </div>
     </div>
   )
 }
 
-export { SkeletonPost, SkeletonList, SkeletonChallenge, SkeletonHot }
+function SkeletonArticles () {
+  return (
+  <div role='status' className='space-y-2.5 animate-pulse w-full'>
+      <div className='w-full grid md:grid-cols-3 grid-cols-2 gap-3'>
+        <div className='bg-gray-200 rounded dark:bg-gray-600 h8'></div>
+        <div className='bg-gray-200 rounded dark:bg-gray-600 h-48'></div>
+        <div className='bg-gray-200 rounded dark:bg-gray-600 h-48'></div>
+        <div className='bg-gray-200 rounded dark:bg-gray-600 h-48'></div>
+        <div className='bg-gray-200 rounded dark:bg-gray-600 h-48'></div>
+        <div className='bg-gray-200 rounded dark:bg-gray-600 h-48'></div>
+      </div>
+    </div> 
+  )
+}
+
+export { SkeletonPost, SkeletonList, SkeletonChallenge, SkeletonHot, SkeletonArticles }

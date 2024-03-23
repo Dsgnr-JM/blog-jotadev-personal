@@ -15,6 +15,7 @@ import { SkeletonHot } from '../components/Skeleton'
 import { Helmet } from 'react-helmet'
 import { useEffect, useState } from 'react'
 import Badge from '../components/Badge.jsx'
+import { Link } from 'react-router-dom'
 
 export default function Home() {
   const [hotArticles, setHotArticles] = useState(null)
@@ -34,13 +35,16 @@ export default function Home() {
           name='description'
           content='Este es un blog sobre desarrollado web, pensado para ser usado como guia de referencia rapida por los programadores ya sean trainner, junior, midnior, senior. Los lenguages abarcados son HTML, CSS, JavaScript, React, TailwindCss, PHP, MySQL'
         />
-        <meta property="og:title" content='Bienvenido a mi Blog JotaDev'></meta>
-        <meta property="og:description" content='Este es un blog sobre desarrollado web, pensado para ser usado como guia de referencia rapida por los programadores ya sean trainner, junior, midnior, senior. Los lenguages abarcados son HTML, CSS, JavaScript, React, TailwindCss, PHP, MySQL'></meta>
-        <meta property="og:image" content='./og-blog.PNG'></meta>
-        <meta property="og:url" content="www.jotadev0.vercel.app"></meta>
-        <meta property="og:type" content="website"/>
+        <meta property='og:title' content='Bienvenido a mi Blog JotaDev'/>
+        <meta
+          property='og:description'
+          content='Este es un blog sobre desarrollado web, pensado para ser usado como guia de referencia rapida por los programadores ya sean trainner, junior, midnior, senior. Los lenguages abarcados son HTML, CSS, JavaScript, React, TailwindCss, PHP, MySQL'
+        />
+        <meta property='og:image' content='./og-blog.PNG'/>
+        <meta property='og:url' content='www.jotadev0.vercel.app'/>
+        <meta property='og:type' content='website'/>
       </Helmet>
-      <header className='w-full flex flex-col md:h-screen h-[90vh]'>
+      <header className='w-full flex flex-col md:h-screen lg:h-[37rem] h-[90vh]'>
         <div className='w-full flex md:justify-between justify-center md:flex-row flex-col h-full items-center -mb-16 md:gap-0 gap-4'>
           <div className='md:max-w-[50%] max-w-max md:flex-auto md:text-left text-center md:order-1 order-2'>
             <h1 className='md:text-7xl text-6xl font-semibold dark:text-white text-black mb-3'>
@@ -61,22 +65,16 @@ export default function Home() {
               </span>
               , es un placer conocerte.
               <span className='md:inline hidden'>
-                Si te preguntas el porque de este Blog{' '}
-                <span className='dark:text-emerald-200 text-emerald-600'></span>
-                pues esta pensado para que puedas usarlo como una
-                <span className='dark:text-emerald-400 text-emerald-700'>
-                  {' '}
-                  guia
-                </span>
+                {' '}Este Blog esta pensado para que pueda se usado como una
                 <span className='dark:text-sky-300 text-sky-600'>
                   {' '}
-                  de referencia rapida.
+                  guia de referencia rapida.
                 </span>
               </span>
-              <span className="flex gap-1 mt-4 items-center md:justify-start justify-center">
-                <Badge title="❤ Frontend"/>
-                <Badge title="🗽 Backend"/>
-                <Badge title="📲 SEO"/>
+              <span className='flex gap-1 mt-4 items-center md:justify-start justify-center'>
+                <Badge title='❤ Frontend' />
+                <Badge title='🗽 Backend' />
+                <Badge title='📲 SEO' />
               </span>
             </p>
           </div>
@@ -90,7 +88,7 @@ export default function Home() {
             target='_blank'
             href='https://github.com/Dsgnr-JM'
             aria-label='Redireccionar a el github de JotaDev'
-            className='flex gap-2 items-center px-2 py-1.5 dark:bg-gray-100/10 bg-gray-600/10 rounded-sm group hover:bg-blue-500 transition duration-300'
+            className='flex gap-2 items-center px-2 py-1.5 dark:bg-gray-100/10 bg-gray-600/10 rounded group hover:bg-blue-500 transition duration-300'
           >
             <FaGithub className='dark:text-white text-blue-600 size-6 group-hover:text-gray-200 group-hover:dark:text-gray-100' />
           </a>
@@ -98,7 +96,7 @@ export default function Home() {
             target='_blank'
             href='https://www.discord.com/JotaDev'
             aria-label='Redireccionar a el grupo de Discord de JotaDev'
-            className='flex gap-2 items-center px-2 py-1.5 dark:bg-gray-100/10 bg-gray-600/10 rounded-sm group hover:bg-blue-500 transition duration-300'
+            className='flex gap-2 items-center px-2 py-1.5 dark:bg-gray-100/10 bg-gray-600/10 rounded group hover:bg-blue-500 transition duration-300'
           >
             <FaDiscord className='dark:text-white text-blue-600 size-6 group-hover:text-gray-200 group-hover:dark:text-gray-100' />
           </a>
@@ -106,7 +104,7 @@ export default function Home() {
             target='_blank'
             href='https://www.whatsapp.org'
             aria-label='Redireccionar a el grupo de WhatsApp "Programadores"'
-            className='flex gap-2 items-center px-2 py-1.5 dark:bg-gray-100/10 bg-gray-600/10 rounded-sm group hover:bg-blue-500 transition duration-300'
+            className='flex gap-2 items-center px-2 py-1.5 dark:bg-gray-100/10 bg-gray-600/10 rounded group hover:bg-blue-500 transition duration-300'
           >
             <FaWhatsapp className='dark:text-white text-blue-600 size-6 group-hover:text-gray-200 group-hover:dark:text-gray-100' />
           </a>
@@ -119,13 +117,18 @@ export default function Home() {
         </h1>
         <ol>
           {hotArticles ? (
-            hotArticles.map((article, i) => (
-              <ArticlesHot
-                key={i}
-                icon={selectIcon(article.language).icon}
-                title={article.title_article}
-              />
-            ))
+            <>
+              {hotArticles.map((article, i) => (
+                <ArticlesHot
+                  key={i}
+                  icon={selectIcon(article.language).icon}
+                  title={article.title_article}
+                />
+              ))}
+              <Link to="/articles" className='dark:text-white/90 w-fit mt-4 text-black/90 mx-auto px-2 py-1 rounded block hover:dark:dark:bg-white/5 hover:bg-gray-200/50 transition duration-300'>
+                Ver todos
+              </Link>
+            </>
           ) : (
             <SkeletonHot />
           )}

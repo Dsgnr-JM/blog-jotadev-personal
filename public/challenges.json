@@ -1,0 +1,44 @@
+[
+  {
+    "id": 0,
+    "title": "¿Es palindromo?",
+    "description": "Crea una funcion que compruebe si una cadena de texto es palindromo 🆘",
+    "langs": ["all"],
+    "dificulty": 1
+  },
+  {
+    "id": 1,
+    "title": "Leer codigo morse",
+    "description": "Realiza una funcion que sea capaz de transcribir codigo morse 👌",
+    "langs": ["all"],
+    "dificulty": 2
+  },
+  {
+    "id": 2,
+    "title": "Peticion y listado",
+    "description": "Haz una peticion a esta URL www.placeholder.com/users y lista sus datos de manera visual",
+    "langs": ["all","html"],
+    "dificulty": 2
+  },
+  {
+    "id": 3,
+    "title": "Ruleta rusa",
+    "description": "Crea una aplicación con las mecanicas básicas del juego de la ruleta rusa ☠",
+    "langs": ["all","dev"],
+    "dificulty": 3
+  },
+  {
+    "id": 4,
+    "title": "API",
+    "description": "Crea una API 📶 completa y desplegala",
+    "langs": ["all","html","javascript","dev","php"],
+    "dificulty": 4
+  },
+  {
+    "id": 5,
+    "title": "Clon de facebook",
+    "description": "Crea un clon de facebook, podras hacerlo pixel perfect 😮?",
+    "langs": ["html", "css"],
+    "dificulty": 3
+  }
+]

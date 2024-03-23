@@ -1,6 +1,6 @@
-<Tags>
-  <Badge title="html" tag="html"/>
-  <Badge title="javascript" tag="javascript"/>
+﻿<Tags>
+  <Badge title="HTML" tag="html"/>
+  <Badge title="JavaScript" tag="javascript"/>
 </Tags>
 
 # Metodos de Arrays en JavaScript 🔥

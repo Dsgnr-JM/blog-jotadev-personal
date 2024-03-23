@@ -1,7 +1,7 @@
-<Tags>
-  <Badge title="javascript" tag="javascript"/>
-  <Badge title="node" tag="node"/>
-  <Badge title="react" tag="react"/>
+﻿<Tags>
+  <Badge title="JavaScript" tag="javascript"/>
+  <Badge title="Node" tag="node"/>
+  <Badge title="React" tag="react"/>
 </Tags>
 
 # Formas de recorrer arrays en JavaScript 🍭

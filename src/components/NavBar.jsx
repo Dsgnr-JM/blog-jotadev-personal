@@ -42,12 +42,15 @@ export default function Header () {
               />
             )}
             <div className="w-full flex items-center relative">
-              <div className="md:static  md:visible invisible absolute md:backdrop-blur-0 md:bg-transparent bg-white/5 rounded backdrop-blur md:p-0 p-2 top-[200%] right-0 flex-1 flex md:flex-row flex-col md:items-center items-end transition" ref={btnMain}>
+              <div className="md:static  md:visible invisible absolute md:bg-transparent md:dark:bg-transparent dark:bg-slate-700 bg-slate-200  rounded md:p-0 p-2 top-[200%] right-0 flex-1 flex md:flex-row flex-col md:items-center items-end transition" ref={btnMain}>
                 <NavLink to='/' className='py-1 px-2 rounded transition-all' aria-label='Ir a la pestaña inicio'>
                   Inicio
                 </NavLink>
+                <NavLink to='/articles' className='py-1 px-2 rounded transition-all' aria-label='Ir a la pestaña Articulos'>
+                  Articulos
+                </NavLink>
                 <NavLink to='/challenges' className='py-1 px-2 rounded transition-all' aria-label='Ir a la pestaña Challenges'>
-                  Challenges
+                  RetosDev
                 </NavLink>
                 <NavLink to='/leaderboard' className='py-1 px-2 rounded transition-all' aria-label='Ir a la pestaña LeaderBoard'>
                   LeaderBoard

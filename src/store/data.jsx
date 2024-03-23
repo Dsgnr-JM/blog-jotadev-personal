@@ -96,7 +96,7 @@ const iconsTag = [
   },
   {
     tag: 'dev',
-    icon: <Dev className='size-full'/>,
+    icon: <Dev className='size-full dark:fill-white fill-black'/>,
     logo: <BiCodeAlt className="fill-current"/>,
   }
 ]

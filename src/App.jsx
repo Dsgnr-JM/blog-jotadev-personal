@@ -4,6 +4,7 @@ import Post from './Routes/Post'
 import Search from './Routes/Search'
 import LeaderBoad from './Routes/LeaderBoard'
 import Challenges from './Routes/Challenges'
+import Articles from './Routes/Articles'
 import { createContext, useState } from 'react'
 import { initThemeStorage } from './localStorage'
 import { useRoutes } from 'react-router-dom'
@@ -30,6 +31,10 @@ const router = [
   {
     path: '/leaderboard',
     element: <LeaderBoad />
+  },
+  {
+    path: '/articles',
+    element: <Articles/>
   }
 ]
 

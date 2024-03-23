@@ -1,7 +1,7 @@
-<Tags>
-  <Badge title="html" tag="html"/>
-  <Badge title="css" tag="css"/>
-  <Badge title="tailwind" tag="tailwind"/>
+﻿<Tags>
+  <Badge title="HTML" tag="html"/>
+  <Badge title="CSS" tag="css"/>
+  <Badge title="Tailwind" tag="tailwind"/>
 </Tags>
 
 # Css moderno esta completamente loco

@@ -1,6 +1,6 @@
-<Tags>
-  <Badge title="node" tag="node"/>
-  <Badge title="javascript" tag="javascript"/>
+﻿<Tags>
+  <Badge title="Node" tag="node"/>
+  <Badge title="JavaScript" tag="javascript"/>
 </Tags>
 
 # Node esta muy mal 🚧
