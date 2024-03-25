@@ -4,7 +4,7 @@
     "language": "javascript",
     "title_article": "Formas de recorrer arrays en JavaScript",
     "description": "Recorrer arrays en js es un trabajo del dia a dia y en JavScript existen diversas maneras de realizar un bucle.",
-    "image": "./Node-esta-muy-mal.PNG",
+    "image": "https://ucarecdn.com/27d39b25-91fd-4623-be34-24d50c66908b/-/preview/600x350/",
     "file":"./article.md",
     "stars": 3
   },
@@ -13,7 +13,7 @@
     "language": "javascript",
     "title_article": "Metodos de Arrays en JavaScript",
     "description": "Los Arrays una de las estructuras de datos más importantes y JavaScript facilitandonos como siempre las cosas.",
-    "image": "./Node-esta-muy-mal.PNG",
+    "image": "https://ucarecdn.com/a86a21fe-b473-4274-8934-8f05c64c19fa/-/preview/800x570/",
     "file":"./article_.md",
     "stars": 4
   },
@@ -22,7 +22,7 @@
     "language": "dev",
     "title_article": "La mejor alernativa Gratuita a Cloudinary",
     "description": "UploadCare la alternativa con capa gratuita a Cloudinary y que deberias usar en 2024.",
-    "image": "./Node-esta-muy-mal.PNG",
+    "image": "https://ucarecdn.com/07d2c99a-3bef-46ad-8de2-99a4ed88b78c/-/preview/1000x616/",
     "file":"./article_df8b6356-6694-45da-a8c9-994ad60f33ac.md"
   },
   {
@@ -30,7 +30,7 @@
     "language": "javascript",
     "title_article": "Ya no necesitaras usar UUID para crear ID unicos",
     "description": "Una utilidad poco conocida de JavaScript esta matando de manera sorprendente a la libreria UUID.",
-    "image": "./Node-esta-muy-mal.PNG",
+    "image": "https://ucarecdn.com/61c56201-9047-4b49-9e2a-1cfd55d265ac/-/preview/1000x562/",
     "file":"./article_071d33a9-affc-4f1b-8e39-961de6e2a109.md",
     "stars": 4
   }

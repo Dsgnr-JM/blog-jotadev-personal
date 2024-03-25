@@ -44,8 +44,8 @@ export default function InfoChallenge({ state,info }) {
           </span>
         </div>
       <div className="flex md:justify-between gap-1 md:text-base text-sm">
-        <a target="_blank" href="https://github.com/Dsgnr-JM/challenges" className="px-2 py-1 dark:bg-gray-100/10 bg-gray-400/30 hover:bg-gray-400/50 text-black/80 dark:text-white hover:dark:bg-gray-100/15 transition-colors rounded">Participar</a>
-        <a target="_blank" href={`https://github.com/Dsgnr-JM/challenges/${info.num}`} className="px-2 py-1 dark:bg-sky-400 hover:dark:bg-sky-500 bg-sky-500 hover:bg-sky-600 dark:text-slate-800 transition-colors rounded">Resolver</a>
+        <a target="_blank" href="https://github.com/Dsgnr-JM/challeges-blog" className="px-2 py-1 dark:bg-gray-100/10 bg-gray-400/30 hover:bg-gray-400/50 text-black/80 dark:text-white hover:dark:bg-gray-100/15 transition-colors rounded">Participar</a>
+        <a target="_blank" href={`https://github.com/Dsgnr-JM/challeges-blog/tree/main/${info.num}`} className="px-2 py-1 dark:bg-sky-400 hover:dark:bg-sky-500 bg-sky-500 hover:bg-sky-600 dark:text-slate-800 transition-colors rounded">Resolver</a>
       </div>
       </div>
       </div>

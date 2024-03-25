@@ -8,7 +8,7 @@
 
 <Author text="Created: March 24, 24"/>
 
-![Libreria UUID](https://ucarecdn.com/07d2c99a-3bef-46ad-8de2-99a4ed88b78c/5e1c21ba24e54556b234957080bc068e.avif)
+![Libreria UUID](https://ucarecdn.com/61c56201-9047-4b49-9e2a-1cfd55d265ac/-/preview/1000x562/)
 
 La creacion de **ID unicos y dinamicos** en programación es un trabajo que los programadores tanto de Backend como Frontend llevan a cabo en el dia a dia, ya sea para que no se repita un elemento u objeto en una base de datos o poder para diferenciar componentes que se repiten en *React*. Una de las libreria de JavaScript que nos hacen ese trabajo de manera rapida es la libreria **UUID**, pero actualmente existe una **alternativa nativa de JavaScript** que es posible que mate a **UUID**.
 

@@ -1,5 +1,3 @@
-import ImgLogo from '../assets/IMG-20221202-WA0001.jpg'
-
 export default function About ({ icon }) {
   return (
     <section className='flex my-20 w-full h-auto p-8 rounded dark:bg-slate-900 shadow-black/5 shadow-xl items-center bg-gray-200/30 md:flex-row flex-col gap-2'>
@@ -26,7 +24,7 @@ export default function About ({ icon }) {
         <figure className='w-[11rem] h-[11rem] rounded-full overflow-hidden'>
           <img
             loading="lazy"
-            src={ImgLogo}
+            src='https://ucarecdn.com/59307f4c-662a-4a44-b820-c51063c2f637/-/preview/208x208/'
             alt='Foto de perfil de Jhoan Mejia - Jota Dev'
             className='object-cover w-full h-full'
           />

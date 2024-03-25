@@ -7,6 +7,8 @@
 
 <Author text="Updated: March 21, 24">
 
+!(Metodos de Arrays)[https://ucarecdn.com/a86a21fe-b473-4274-8934-8f05c64c19fa/-/preview/800x570/]
+
 Los metodos de arrays en **JavaScript** son todas aquellas funciones que nos ayudan en el dia a dia del programador a solucionar problemas en **Arrays** que pueden verse complejos 💢 si no se conocen bien el como funciona el algoritmo de estas **tipos de datos**. En este post veremos desde el pequeño metodo *SORT* hasta el grandioso metodo *REDUCE*, si estas listo para conocer a detalle dichos metodos pues que estas esperando para comenzar a bajar ⏬.
 
 1. Metodo Sort

@@ -1,4 +1,4 @@
-import { SkeletonChallenge } from '../components/Skeleton'
+﻿import { SkeletonChallenge } from '../components/Skeleton'
 import { Helmet } from 'react-helmet'
 import { useEffect, useState } from 'react'
 import Challenge from '../components/Challenge'
@@ -51,7 +51,7 @@ export default function Challenges() {
 						<p className='text-base dark:text-gray-50/85 text-gray-700/95 my-1 md:w-4/5 w-full'>
 							La mejor forma de aprender programacion es programando 💻, y que
 							mejor forma de codear que con unos buenos retos. Esta seccion
-							abarca desde retos de logica hasta aplicaciones complejas, si no sabes como participar sigue este enlace <a href="https://github.com/Dsgnr-JM/challenges" target="_blank" className="dark:text-sky-400 text-sky-500 underline">Ver mas</a>
+							abarca desde retos de logica hasta aplicaciones complejas, si no sabes como participar sigue este enlace <a href="https://github.com/Dsgnr-JM/challeges-blog" target="_blank" className="dark:text-sky-400 text-sky-500 underline">Ver mas</a>
 						</p>
 					</div>
 					{challenges ? (
