@@ -12,9 +12,9 @@
 
 Probablemente ya tienes una página web muy bella y que construiste con mucho empeño, pero que pasa si esta página no está optimizada para el Crawler de los motores de búsqueda?, pues que nadie la va a encontrar, para que este "robot" pueda encontrar nuestra página se debe implementar algo llamado **SEO** y en este Blog veremos la **Guía completa de SEO para mejorar el posicionamiento de la Web**, aunque antes debemos saber que es el **SEO** y **como funciona**.
 
-## Que es el SEO?
+## Qué es el SEO?
 
-EL SEO, o Search Engine Optimization (optimización para motores de búsqueda), es un conjunto de técnicas que se aplican a una página web para mejorar su visibilidad y posicionamiento en los resultados orgánicos de los buscadores como Google. El objetico es atraer más tráfico a la web de forma gratuita, aumentando la presencia online del negocio o marca.
+EL SEO, o Search Engine Optimization (optimización para motores de búsqueda), es un conjunto de técnicas que se aplican a una página web para mejorar su visibilidad y posicionamiento en los resultados orgánicos de los buscadores como Google. El objetivo es atraer más tráfico a la web de forma gratuita, aumentando la presencia online del negocio o marca.
 
 Ahora **cómo funciona el SEO**?, pues los motores de búsqueda como Google utilizan complejos algoritmos para determinar la relevancia y autoridad de las páginas web. Estos algoritmos analizan cientos de factores, como la calidad del contenido, la estructura del sitio, la velocidad de carga, la presencia de palabras claves relevantes y los enlaces entrantes (backlinks).
 
