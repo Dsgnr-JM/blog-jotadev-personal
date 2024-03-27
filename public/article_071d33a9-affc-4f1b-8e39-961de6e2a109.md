@@ -63,7 +63,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
 
 ```
 
-> Usamos ==crypto== para no tener problemas de renderizado
+> Ten en cuenta que usar ==crypto== de esta manera puede dar problemas de rendimiento en react
 
 **PHP**: Cuando queremos tener en nuestra base de datos ya sea ==MySQL== una columna que no se pueda repetir usamos una llave primaria en su mayoria con el nombre ==id==, pero el problema esta cuando queremos enviar datos a esa columna ya que el valor no se puede repetir, (*daria error*), entonces este seria un buen caso de uso para ==crypto==.
 

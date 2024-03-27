@@ -8,7 +8,7 @@
 
 <Author text="Updated: March 20, 24">
 
-!(Bucles en Arrays)[https://ucarecdn.com/27d39b25-91fd-4623-be34-24d50c66908b/-/preview/600x350/]
+![Bucles en Arrays](https://ucarecdn.com/27d39b25-91fd-4623-be34-24d50c66908b/-/preview/600x350/)
 
 Recorrer un array es una tarea que aunque parece simple puede volver compleja, ademas que es sin duda una de las tareas mas cotidianas que veremos en el mundo de la programacion. E javaScript existen diferentes metodos y maneras de recorrer un array, por ello en este articulo te mostraremos las diferentes Maneras de Recorrer un Array en JS, desde el viejo bucle ***For*** hasta la herramienta de la ***Recursividad***. Si estas listo para aprender mas sobre programacion pues empezemos si mas.
 

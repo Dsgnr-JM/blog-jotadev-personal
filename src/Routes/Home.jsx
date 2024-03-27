@@ -30,12 +30,12 @@ export default function Home() {
   return (
     <div className='main md:w-[50rem] md:px-0 px-4 w-full flex-col'>
       <Helmet>
-        <title>Bienvenido a mi Blog JotaDev</title>
+        <title>Mas que un Codigo || JotaDev</title>
         <meta
           name='description'
           content='Este es un blog sobre desarrollado web, pensado para ser usado como guia de referencia rapida por los programadores ya sean trainner, junior, midnior, senior. Los lenguages abarcados son HTML, CSS, JavaScript, React, TailwindCss, PHP, MySQL'
         />
-        <meta property='og:title' content='Bienvenido a mi Blog JotaDev'/>
+        <meta property='og:title' content='Mas que un Codigo || JotaDev'/>
         <meta
           property='og:description'
           content='Este es un blog sobre desarrollado web, pensado para ser usado como guia de referencia rapida por los programadores ya sean trainner, junior, midnior, senior. Los lenguages abarcados son HTML, CSS, JavaScript, React, TailwindCss, PHP, MySQL'

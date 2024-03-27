@@ -33,5 +33,14 @@
     "image": "https://ucarecdn.com/61c56201-9047-4b49-9e2a-1cfd55d265ac/-/preview/1000x562/",
     "file":"./article_071d33a9-affc-4f1b-8e39-961de6e2a109.md",
     "stars": 4
+  },
+  {
+    "id": 4,
+    "language": "dev",
+    "title_article": "Guia Completa de SEO: Mejora tu posisionamiento en la Web",
+    "description": "De que vale tener una excelente web si no la puedes posicionar en el Gigante Google.",
+    "image": "https://ucarecdn.com/6bec1f1f-694a-4836-9cb5-d17e9c25ffbd/-/preview/1000x1000/",
+    "file":"./article_75cfb69d-f40e-4b89-aaa8-5d0de17562a8.md",
+    "stars": 5
   }
 ]

@@ -43,12 +43,12 @@ function PostContainer ({ title, file }) {
                   li: {
                     props: {
                       className:
-                        'text-2xl mt-8 pt-1 font-bold tracking-wider dark:text-sky-400 text-blue-500'
+                        'text-2xl mt-8 pt-1 font-extrabold dark:text-sky-400 text-blue-500'
                     }
                   },
                   h2:{
                     props:{
-                      className: 'text-2xl mt-8 font-extrabold tracking-wider dark:text-white/90 text-black/90'
+                      className: '[font-size:1.65rem] mt-8 font-extrabold leading-[2.1rem] dark:text-white/90 text-black/90'
                     }
                   },
                   p: {
