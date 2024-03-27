@@ -35,13 +35,13 @@ function Footer ({prevTitle, nextTitle}) {
 					<Button like='No' />
 				</div>
 			</div>*/}
-			<div className='w-full flex items-center justify-between mt-9 gap-2 [&>a]:leading-5'>
+			<div className='w-full flex items-center justify-between mt-9 gap-2 [&>a]:leading-5 basis-1'>
 				{
 					prevTitle ?
 						<Link
 							to={`../blog/${urlReplaceToLines(prevTitle, true)}`}
 							aria-label={`El enlace lleva a ${prevTitle}`}
-							className='py-1.5 px-2 border-[1px] border-emerald-500 dark:border-emerald-600 dark:text-emerald-500 text-emerald-600 rounded font-semibold tracking-wider flex items-center gap-1 hover:bg-emerald-600 dark:hover:bg-emerald-500 500  dark:hover:text-slate-800 hover:text-slate-100 hover:shadow-xl text-sm transition '
+							className='max-w-[50%] min-h-full py-1.5 px-2 border-[1px] border-emerald-500 dark:border-emerald-600 dark:text-emerald-500 text-emerald-600 rounded font-semibold tracking-wider flex items-center gap-1 hover:bg-emerald-600 dark:hover:bg-emerald-500 500  dark:hover:text-slate-800 hover:text-slate-100 hover:shadow-xl text-sm transition '
 						>
 							<FaChevronLeft />
 							{prevTitle}
@@ -54,7 +54,7 @@ function Footer ({prevTitle, nextTitle}) {
 						<Link
 							to={`../blog/${urlReplaceToLines(nextTitle, true)}`}
 							aria-label={`El enlace lleva a ${nextTitle}`}
-							className='py-1.5 px-2 border-[1px] dark:border-blue-400 border-blue-500 dark:text-blue-400 text-blue-500 rounded font-semibold tracking-wider flex items-center gap-1 dark:hover:bg-blue-400 hover:bg-blue-500 dark:hover:text-slate-800 hover:text-slate-100 hover:shadow-xl text-sm transition'
+							className='max-w-[50%] min-h-full py-1.5 px-2 border-[1px] dark:border-blue-400 border-blue-500 dark:text-blue-400 text-blue-500 rounded font-semibold tracking-wider flex items-center gap-1 dark:hover:bg-blue-400 hover:bg-blue-500 dark:hover:text-slate-800 hover:text-slate-100 hover:shadow-xl text-sm transition'
 						>
 							{nextTitle}
 							<FaChevronRight />
